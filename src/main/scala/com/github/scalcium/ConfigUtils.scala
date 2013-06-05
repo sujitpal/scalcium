@@ -1,6 +1,5 @@
 package com.github.scalcium
 
-import Predef._
 import scala.io.Source
 
 object ConfigUtils {

@@ -62,10 +62,16 @@ class Tokenizer {
     }
   })
 
+  /**
+   * Tokenize text into a List of sentences.
+   */
   def sentTokenize(text: String): List[String] = {
     sentenceDetector.sentDetect(text).toList
   }
   
+  /**
+   * Tokenize sentence into a List of phrases.
+   */
   def phraseTokenize(sentence: String): List[String] = {
     val tokenSpans = tokenizer.tokenizePos(sentence)
     val tokens = tokenSpans.map(span => 
@@ -78,6 +84,9 @@ class Tokenizer {
     }).toList
   }
   
+  /**
+   * Tokenize sentence into List of words.
+   */
   def wordTokenize(sentence: String): List[String] = {
     return tokenizer.tokenize(sentence).toList
   }
