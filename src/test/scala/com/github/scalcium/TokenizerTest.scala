@@ -10,21 +10,21 @@ class TokenizerTest {
   
   @Test def testSentTokenize(): Unit = {
     val sentences = tokenizer.sentTokenize(text)
-//    sentences.foreach(Console.println(_))
+    sentences.foreach(Console.println(_))
     Assert.assertEquals(5, sentences.length)
   }
   
   @Test def testWordTokenize(): Unit = {
     val sentences = tokenizer.sentTokenize(text)
     val words = tokenizer.wordTokenize(sentences(0))
-//    words.foreach(Console.println(_))
+    words.foreach(Console.println(_))
     Assert.assertEquals(18, words.length)
   }
   
   @Test def testPhraseTokenize(): Unit = {
     val sentences = tokenizer.sentTokenize(text)
     val phrases = tokenizer.phraseTokenize(sentences(0))
-//    phrases.foreach(Console.println(_))
+    phrases.foreach(Console.println(_))
     Assert.assertEquals(8, phrases.length)
   }
 }
