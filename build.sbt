@@ -15,5 +15,6 @@ libraryDependencies ++= Seq(
   "org.apache.lucene" % "lucene-analyzers-common" % "4.2.1",
   "org.apache.lucene" % "lucene-queries" % "4.2.1",
   "org.apache.lucene" % "lucene-queryparser" % "4.2.1",
+  "commons-io" % "commons-io" % "2.4",
   "com.novocode" % "junit-interface" % "0.8" % "test"
 )
