@@ -1,24 +1,31 @@
 package com.github.scalcium
 
-import java.io.{File, FileInputStream}
+import java.io.InputStream
+
+import scala.Array.canBuildFrom
 
 import org.apache.commons.io.IOUtils
 
-import opennlp.tools.chunker.{ChunkerME, ChunkerModel}
-import opennlp.tools.postag.{POSModel, POSTaggerME}
-import opennlp.tools.sentdetect.{SentenceDetectorME, SentenceModel}
-import opennlp.tools.tokenize.{TokenizerME, TokenizerModel}
+import opennlp.tools.chunker.ChunkerME
+import opennlp.tools.chunker.ChunkerModel
+import opennlp.tools.postag.POSModel
+import opennlp.tools.postag.POSTaggerME
+import opennlp.tools.sentdetect.SentenceDetectorME
+import opennlp.tools.sentdetect.SentenceModel
+import opennlp.tools.tokenize.TokenizerME
+import opennlp.tools.tokenize.TokenizerModel
 
 class Tokenizer {
 
-  val ModelDir = "/prod/common/data/opennlp"
+  val ModelDir = "/opennlp/models"
 
   val sentenceDetectorFn = (model: SentenceModel) =>
     new SentenceDetectorME(model)    
   val sentenceDetector = sentenceDetectorFn({
-    var smis: FileInputStream = null
+    var smis: InputStream = null
     try {
-      smis = new FileInputStream(new File(ModelDir, "en-sent.bin"))
+      smis = getClass.getResourceAsStream(
+        List(ModelDir, "en_sent.bin").mkString("/"))
       val model = new SentenceModel(smis)
       model
     } finally {
@@ -28,9 +35,10 @@ class Tokenizer {
   val tokenizerFn = (model: TokenizerModel) => 
     new TokenizerME(model)
   val tokenizer = tokenizerFn({
-    var tmis: FileInputStream = null
+    var tmis: InputStream = null
     try {
-      tmis = new FileInputStream(new File(ModelDir, "en-token.bin"))
+      tmis = getClass.getResourceAsStream(
+        List(ModelDir, "en_token.bin").mkString("/"))
       val model = new TokenizerModel(tmis)
       model
     } finally {
@@ -40,9 +48,10 @@ class Tokenizer {
   val posTaggerFn = (model: POSModel) => 
     new POSTaggerME(model)
   val posTagger = posTaggerFn({
-    var pmis: FileInputStream = null
+    var pmis: InputStream = null
     try {
-      pmis = new FileInputStream(new File(ModelDir, "en-pos-maxent.bin"))
+      pmis = getClass.getResourceAsStream(
+        List(ModelDir, "en_pos_maxent.bin").mkString("/"))
       val model = new POSModel(pmis)
       model
     } finally {
@@ -52,9 +61,10 @@ class Tokenizer {
   val chunkerFn = (model: ChunkerModel) => 
     new ChunkerME(model)
   val chunker = chunkerFn({
-    var cmis: FileInputStream = null
+    var cmis: InputStream = null
     try {
-      cmis = new FileInputStream(new File(ModelDir, "en-chunker.bin"))
+      cmis = getClass.getResourceAsStream(
+        List(ModelDir, "en_chunker.bin").mkString("/"))
       val model = new ChunkerModel(cmis)
       model
     } finally {
@@ -63,10 +73,17 @@ class Tokenizer {
   })
 
   /**
-   * Tokenize text into a List of sentences.
+   * Tokenize incoming text into List of paragraphs.
    */
-  def sentTokenize(text: String): List[String] = {
-    sentenceDetector.sentDetect(text).toList
+  def paraTokenize(text: String): List[String] = {
+    text.split("\n\n").toList  
+  }
+    
+  /**
+   * Tokenize a paragraph into a List of sentences.
+   */
+  def sentTokenize(para: String): List[String] = {
+    sentenceDetector.sentDetect(para).toList
   }
   
   /**

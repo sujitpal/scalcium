@@ -1,0 +1,78 @@
+#Pseudo negation terms
+no increase
+no suspicious change
+no significant change
+no change
+no interval change
+no definite change
+no significant interval change
+not extend
+not cause
+not drain
+not certain if
+not certain whether
+gram negative
+without difficulty
+not necessarily
+not only
+
+#Pre-condition negation terms (used to mark an indexed term as negated)
+absence of
+cannot
+cannot see
+checked for
+declined
+declines
+denied
+denies
+denying
+evaluate for
+fails to reveal
+free of
+negative for
+never developed
+never had
+no
+no abnormal
+no cause of
+no complaints of
+no evidence
+no new evidence
+no other evidence
+no evidence to suggest
+no findings of
+no findings to indicate
+no mammographic evidence of
+no new
+no radiographic evidence of
+no sign of
+no significant
+no signs of
+no suggestion of
+no suspicious
+not
+not appear
+not appreciate
+not associated with
+not complain of
+not demonstrate
+not exhibit
+not feel
+not had
+not have
+not know of
+not known to have
+not reveal
+not see
+not to be
+patient was not
+rather than
+resolved
+test for
+to exclude
+unremarkable for
+with no
+without
+without any evidence of
+without evidence
+without indication of

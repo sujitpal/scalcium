@@ -4,7 +4,8 @@ import scala.io.Source
 
 object ConfigUtils {
 
-  val config = Source.fromFile("/prod/web/config/cm2.cf")
+  val config = Source.fromInputStream(getClass.getResourceAsStream(
+    "/scalcium.properties"))
   val confMap: Map[String,String] = Map() ++ config.getLines().map(line => {
     if (line != null && line.trim().length() > 0 &&
         (! line.startsWith("#"))) {
