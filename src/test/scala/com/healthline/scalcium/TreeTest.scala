@@ -1,4 +1,4 @@
-package com.github.scalcium
+package com.healthline.scalcium
 
 import org.junit.Test
 
@@ -21,5 +21,4 @@ class TreeTest {
             new Tree(word, null)))))))))
     Console.println("tree=" + x)
   }
-
 }
