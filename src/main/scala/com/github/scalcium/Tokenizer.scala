@@ -73,15 +73,7 @@ class Tokenizer {
    * Tokenize sentence into a List of phrases.
    */
   def phraseTokenize(sentence: String): List[String] = {
-    val tokenSpans = tokenizer.tokenizePos(sentence)
-    val tokens = tokenSpans.map(span => 
-      span.getCoveredText(sentence).toString())
-    val tags = posTagger.tag(tokens)
-    return chunker.chunkAsSpans(tokens, tags).map(chunk => {
-      val start = tokenSpans(chunk.getStart()).getStart()
-      val end = tokenSpans(chunk.getEnd() - 1).getEnd()
-      sentence.substring(start, end)
-    }).toList
+    phraseChunk(sentence).map(x => x._1)
   }
   
   /**
@@ -89,5 +81,32 @@ class Tokenizer {
    */
   def wordTokenize(sentence: String): List[String] = {
     return tokenizer.tokenize(sentence).toList
+  }
+  
+  /**
+   * POS tags a sentence into a list of (token, tag) tuples.
+   */
+  def posTag(sentence: String): List[(String,String)] = {
+    val tokenSpans = tokenizer.tokenizePos(sentence)
+    val tokens = tokenSpans.map(span => 
+      span.getCoveredText(sentence).toString())
+    val tags = posTagger.tag(tokens)
+    tokens.zip(tags).toList
+  }
+  
+  /**
+   * Shallow chunks a sentence into a list of (phrase, tag)
+   * tuples.
+   */
+  def phraseChunk(sentence: String): List[(String,String)] = {
+    val tokenSpans = tokenizer.tokenizePos(sentence)
+    val tokens = tokenSpans.map(span => 
+      span.getCoveredText(sentence).toString())
+    val tags = posTagger.tag(tokens)
+    return chunker.chunkAsSpans(tokens, tags).map(chunk => {
+      val start = tokenSpans(chunk.getStart()).getStart()
+      val end = tokenSpans(chunk.getEnd() - 1).getEnd()
+      (sentence.substring(start, end), chunk.getType())
+    }).toList
   }
 }

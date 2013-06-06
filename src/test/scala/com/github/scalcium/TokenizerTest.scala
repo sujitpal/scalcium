@@ -27,4 +27,20 @@ class TokenizerTest {
     phrases.foreach(Console.println(_))
     Assert.assertEquals(8, phrases.length)
   }
+  
+  @Test def testPhraseChunk(): Unit = {
+    val sentences = tokenizer.sentTokenize(text)
+    val chunks = tokenizer.phraseChunk(sentences(0))
+    chunks.foreach(Console.println(_))
+    Assert.assertEquals(chunks(0)._1, "Pierre Vinken")
+    Assert.assertEquals(chunks(0)._2, "NP")
+  }
+  
+  @Test def testPosTag(): Unit = {
+    val sentences = tokenizer.sentTokenize(text)
+    val taggedWords = tokenizer.posTag(sentences(0))
+    taggedWords.foreach(Console.println(_))
+    Assert.assertEquals(taggedWords(0)._1, "Pierre")
+    Assert.assertEquals(taggedWords(0)._2, "NNP")
+  }
 }
