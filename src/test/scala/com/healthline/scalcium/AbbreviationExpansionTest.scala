@@ -1,7 +1,7 @@
 package com.healthline.scalcium
 
 import org.junit.Test
-import scala.util.matching.Regex
+import org.junit.Assert
 
 class AbbreviationExpansionTest {
 
@@ -10,13 +10,22 @@ class AbbreviationExpansionTest {
     "The nitrates (NO(3)-N) lost through subsurface drainage in the Midwest often exceed concentrations that cause deleterious effects on the receiving streams and lead to hypoxic conditions in the northern Gulf of Mexico. The use of drainage and water quality models along with observed data analysis may provide new insight into the water and nutrient balance in drained agricultural lands and enable evaluation of appropriate measures for reducing NO(3)-N losses.  DRAINMOD-NII, a carbon (C) and nitrogen (N) simulation model, was field tested for the high organic matter Drummer soil in Indiana and used to predict the effects of fertilizer application rate and drainage water management (DWM) on NO-N losses through subsurface drainage. The model was calibrated and validated for continuous corn (Zea mays L.) (CC) and corn-soybean [Glycine max (L.) Merr.] (CS) rotation treatments separately using 7 yr of drain flow and NO(3)-N concentration data. Among the treatments, the Nash-Sutcliffe efficiency of the monthly NO(3)-N loss predictions ranged from 0.30 to 0.86, and the percent error varied from -19 to 9%. The medians of the observed and predicted monthly NO(3)-N losses were not significantly different. When the fertilizer application rate was reduced ~20%, the predicted NO(3)-N losses in drain flow from the CC treatments was reduced 17% (95% confidence interval [CI], 11-25), while losses from the CS treatment were reduced by 10% (95% CI, 1-15). With DWM, the predicted average annual drain flow was reduced by about 56% (95% CI, 49-67), while the average annual NO(3)-N losses through drain flow were reduced by about 46% (95% CI, 32-57) for both tested crop rotations. However, the simulated NO(3)-N losses in surface runoff increased by about 3 to 4 kg ha(-1) with DWM. For the simulated conditions at the study site, implementing DWM along with reduced fertilizer application rates would be the best strategy to achieve the highest NO(3)-N loss reductions to surface water. The suggested best strategies would reduce the NO(3)-N losses to surface water by 38% (95% CI, 29-46) for the CC treatments and by 32% (95% CI, 23-40) for the CS treatments.",
     "International Business Machines (IBM) makes computers. IBM was recently in the news. In India Hindustan Computers Limited (HCL) is also popular. HCL makes minicomputers and provides Unix support."
   )
+  val tokenizer = new Tokenizer()
 
   @Test def testAbbreviationExpansion(): Unit = {
-    val tokenizer = new Tokenizer()
     texts.foreach(text => {
-      val otext = AbbreviationExpander.expandAbbreviations(text, tokenizer)
+      val otext = AbbreviationExpander.expand(text, tokenizer)
       Console.println("INPUT: " + text)
       Console.println("OUTPUT: " + otext)
-    })  
+    })
+  }
+  
+  @Test def testCheckAbbreviationExpansion(): Unit = {
+    val otext = AbbreviationExpander.expand(texts(2), tokenizer)
+    val ibmPattern = "IBM".r
+    val ibmMatchedIn = ibmPattern.findAllIn(texts(2)).toList.size
+    val ibmMatchedOut = ibmPattern.findAllIn(otext).toList.size
+    Assert.assertTrue(ibmMatchedIn > 0)
+    Assert.assertEquals(0, ibmMatchedOut)
   }
 }

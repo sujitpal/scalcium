@@ -11,15 +11,16 @@ import scala.util.matching.Regex
  */
 object AbbreviationExpander {
 
-  def expandAbbreviations(text: String, tokenizer: Tokenizer): String = {
-    val pattern = new Regex("\\(.*?\\)")
-    val punct = new Regex("\\p{Punct}")
+  val AbbrPattern = new Regex("\\(.*?\\)")
+  val PunctStripper = new Regex("\\p{Punct}")
+  
+  def expand(text: String, tokenizer: Tokenizer): String = {
     val abbrMap = scala.collection.mutable.Map[String,String]()
-    val matches = pattern.findAllIn(text).map(m => 
-      punct.replaceAllIn(m, "")).toList
+    val matches = AbbrPattern.findAllIn(text).map(m => 
+      PunctStripper.replaceAllIn(m, "")).toList
     val sentences = tokenizer.sentTokenize(text)
     val plainSentences = sentences.map(sentence => 
-      punct.replaceAllIn(sentence, ""))
+      PunctStripper.replaceAllIn(sentence, ""))
     for (m <- matches; 
          s <- plainSentences) {
       if (! abbrMap.contains(m)) {
@@ -27,8 +28,9 @@ object AbbreviationExpander {
         val pos = words.indexOf(m)
         val len = m.length()
         if (pos - len >= 0) {
-          val candidate = words.slice(pos - len, pos)
-          if (isValid(candidate, m)) abbrMap(m) = candidate.mkString(" ")
+          val candidateExpansion = words.slice(pos - len, pos)
+          if (isExpansionValid(candidateExpansion, m)) 
+            abbrMap(m) = candidateExpansion.mkString(" ")
         }
       }
     }
@@ -43,8 +45,7 @@ object AbbreviationExpander {
     otext
   }
 
-  def isValid(words: Array[String], abbr: String): Boolean = {
-    words.zip(abbr.toCharArray()).forall(
-      x => x._1.toLowerCase.charAt(0) == x._2.toLowerCase)
+  def isExpansionValid(words: Array[String], abbr: String): Boolean = {
+    words.zip(abbr).forall(x => x._1.charAt(0) == x._2)
   }
 }
