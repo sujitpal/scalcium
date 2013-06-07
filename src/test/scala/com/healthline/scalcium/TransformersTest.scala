@@ -15,8 +15,8 @@ The program has different settings for: simple and blocked randomizations; lengt
 Random Allocation Software enables users to control different attributes of the random allocation sequence and produce qualified lists for parallel group trials.
       """
     val doc = Doc("els", null, null, docBody, null, null, null, null, null, null, null)
-    val transformer = new Transformers()
-    val odoc = transformer.transform(doc)
+    val chain = new Transformers()
+    val odoc = chain.transform(doc)
     Console.println(odoc)
   }
 }

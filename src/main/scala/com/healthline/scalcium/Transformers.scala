@@ -72,17 +72,14 @@ class Transformers {
   }
   
   def shouldPerform(doc: Doc, key: String): Boolean = {
-    ConfigUtils.getBooleanValue(doc.contentType, key, false)  
+    ConfigUtils.getBooleanValue(doc.contentType, key, true)  
   }
   
   def processParagraphs = (doc: Doc) => {
     if (! shouldPerform(doc, "processParagraphs")) doc
     else {
       // TODO: any para level work?
-      val odoc = Doc(doc.contentType, doc.title, doc.keywords, 
-    	doc.body, tokenizer.paraTokenize(doc.body), null, null, 
-    	null, null, null, null)
-      odoc
+      doc.copy(paragraphs=tokenizer.paraTokenize(doc.body))
     }
   }
   
@@ -93,12 +90,9 @@ class Transformers {
       doc.paragraphs.foreach(paragraph => {
         val sentences = tokenizer.sentTokenize(paragraph)
         // TODO: do sentence level work here
-        sbuf ++ sentences
+        sbuf ++= sentences
       })
-      val odoc = Doc(doc.contentType, doc.title, doc.keywords, 
-        doc.body, doc.paragraphs, sbuf.toList, null, null, 
-        null, null, null)
-      odoc
+      doc.copy(sentences=sbuf.toList)
     }
   }
   
@@ -111,12 +105,9 @@ class Transformers {
       doc.sentences.foreach(sentence => { 
         val phrases = tokenizer.phraseTokenize(sentence)
         // TODO: do phrase level work here
-        phbuf ++ phrases
+        phbuf ++= phrases
   	  })
-  	  val odoc = Doc(doc.contentType, doc.title, doc.keywords, 
-  	    doc.body, doc.paragraphs, doc.sentences, phbuf.toList, 
-  	    null, null, null, null)
-  	  odoc
+  	  doc.copy(phrases=phbuf.toList)
     }
   }
 
