@@ -25,7 +25,7 @@ case class Doc (
   words: List[String],
   title_cp: String,
   body_cp: String,
-  concepts: List[HealthConcept]
+  scores: Map[HealthConcept,Float]
 )
 
 class Transformers {
@@ -39,7 +39,8 @@ class Transformers {
     processSentences,
     handleNegation,
     // operate on phrases
-    processPhrases
+    processPhrases,
+    calculateBaseScores
 //    buildTokenTree,
 //    setBoostFactors,
 //    countWords,
@@ -66,7 +67,6 @@ class Transformers {
   )
   
   val tokenizer = new Tokenizer()
-  val qpe = QueryEngine.getQueryService()
   
   def transform(doc: Doc): Doc = transform_r(doc, chain)
   
@@ -126,6 +126,11 @@ class Transformers {
     }
   }
 
-  // TODO: insert functions that operate on phrases here
-  
+  def calculateBaseScores = (doc: Doc) => {
+    if (! shouldPerform(doc, "calculateBaseScores")) doc
+    else {
+      val baseScore = ScoreCalculator.baseScores(doc.phrases)
+      doc.copy(scores=baseScore)
+    }
+  }
 }

@@ -20,6 +20,7 @@ libraryDependencies ++= Seq(
   "org.apache.lucene" % "lucene-queries" % "4.2.1",
   "org.apache.lucene" % "lucene-queryparser" % "4.2.1",
   "org.apache.commons" % "commons-lang3" % "3.0",
+  "net.sourceforge.collections" % "collections-generic" % "4.01",
   "commons-io" % "commons-io" % "2.4",
   "log4j" % "log4j" % "1.2.14",
   "com.novocode" % "junit-interface" % "0.8" % "test"
