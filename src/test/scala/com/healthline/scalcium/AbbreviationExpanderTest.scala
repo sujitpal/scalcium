@@ -3,7 +3,7 @@ package com.healthline.scalcium
 import org.junit.Test
 import org.junit.Assert
 
-class AbbreviationExpansionTest {
+class AbbreviationExpanderTest {
 
   val texts = Array[String](
     "The aim of the present study was to investigate the effect of some air pollutants and meteorological parameters on the survivability of airborne fungi. Fungi were collected by using a slit impactor sampler calibrated to draw 20 L/min, for 3 min. Nitrogen dioxide (NO(2)), sulfur dioxide (SO(2)), particulate matter (PM), relative humidity (RH %), temperature (T °C) and wind speed (WS) were also measured. Air samples were taken during the period from March 2006 to February 2007. Fungal concentrations ranged between 45 and 451 CFU/m(3) with an annual mean concentration of 216 CFU/m(3). The lowest fungal concentration was found in the summer, however the highest one was found in the autumn. NO(2,) SO(2) and PM averaged 83.66 μg/m(3), 67.01 μg/m(3), and 237.69 μg/m(3), respectively. T °C was positively and negatively correlated with Aspergillus (P = 0.000) and Penicillium (P = 0.007), respectively. RH% was positively correlated with total fungi (P = 0.001), Aspergillus (P = 0.002) and Cladosporium (P = 0.047). Multiple regression analysis showed that T °C and RH% were the most predicted variants. Non-significant correlations were found between fungal concentrations and air pollutants. Meteorological parameters were the critical factors affecting fungal survivability. Copyright © 2011 Elsevier B.V. All rights reserved.",

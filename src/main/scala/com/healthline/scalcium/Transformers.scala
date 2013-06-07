@@ -31,8 +31,14 @@ case class Doc (
 class Transformers {
   
   val chain = Seq[Function1[Doc,Doc]](
+    // operate on raw text
+    expandAbbreviations,
+    // operate on paragraphs
     processParagraphs,
+    // operate on sentences
     processSentences,
+    handleNegation,
+    // operate on phrases
     processPhrases
 //    buildTokenTree,
 //    setBoostFactors,
@@ -75,12 +81,16 @@ class Transformers {
     ConfigUtils.getBooleanValue(doc.contentType, key, true)  
   }
   
+  ////////////////////////////////////////////////////////////////
+  
+  def expandAbbreviations = (doc: Doc) => {
+    if (! shouldPerform(doc, "expandAbbreviations")) doc
+    else doc.copy(body=AbbreviationExpander.expand(doc.body, tokenizer))
+  }
+  
   def processParagraphs = (doc: Doc) => {
     if (! shouldPerform(doc, "processParagraphs")) doc
-    else {
-      // TODO: any para level work?
-      doc.copy(paragraphs=tokenizer.paraTokenize(doc.body))
-    }
+    else doc.copy(paragraphs=tokenizer.paraTokenize(doc.body))
   }
   
   def processSentences = (doc: Doc) => {
@@ -89,14 +99,20 @@ class Transformers {
       val sbuf = new ArrayBuffer[String]()
       doc.paragraphs.foreach(paragraph => {
         val sentences = tokenizer.sentTokenize(paragraph)
-        // TODO: do sentence level work here
         sbuf ++= sentences
       })
       doc.copy(sentences=sbuf.toList)
     }
   }
   
-  // TODO: insert any functions that operate on sentences here
+  def handleNegation = (doc: Doc) => {
+    if (! shouldPerform(doc, "handleNegation")) doc
+    else {
+      val osentences = doc.sentences.map(sentence =>
+        NegationHandler.maskNegative(sentence, tokenizer))
+      doc.copy(sentences=osentences)
+    }
+  }
   
   def processPhrases = (doc: Doc) => {
     if (! shouldPerform(doc, "processPhrases")) doc
@@ -104,7 +120,6 @@ class Transformers {
       val phbuf = new ArrayBuffer[String]()
       doc.sentences.foreach(sentence => { 
         val phrases = tokenizer.phraseTokenize(sentence)
-        // TODO: do phrase level work here
         phbuf ++= phrases
   	  })
   	  doc.copy(phrases=phbuf.toList)
