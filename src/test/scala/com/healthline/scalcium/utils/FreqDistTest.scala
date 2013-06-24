@@ -1,9 +1,8 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.utils
 
-import util.Random
-import scala.math
-import org.junit.Test
-import org.junit.Assert
+import scala.util.Random
+
+import org.junit.{Assert, Test}
 
 class FreqDistTest {
 

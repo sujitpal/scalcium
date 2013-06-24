@@ -1,9 +1,11 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.transformers
 
 import org.junit.Test
 import scala.collection.mutable.ArrayBuffer
 import com.healthline.util.Config
 import org.junit.Assert
+import org.junit.Test
+import com.healthline.scalcium.utils.Tokenizer
 
 class ScoreCalculatorTest {
 

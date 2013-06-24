@@ -1,9 +1,9 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.transformers
 
-import com.healthline.query.QueryEngine
-import com.healthline.query.MappedHealthConcept
+import scala.collection.JavaConversions.bufferAsJavaList
 import scala.collection.mutable.ArrayBuffer
-import collection.JavaConversions._
+
+import com.healthline.query.{MappedHealthConcept, QueryEngine}
 import com.healthline.query.kb.HealthConcept
 
 object ScoreCalculator {

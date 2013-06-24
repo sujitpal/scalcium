@@ -1,4 +1,4 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.utils
 
 import scala.collection.mutable.ArrayBuffer
 

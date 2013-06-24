@@ -1,7 +1,9 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.transformers
 
 import org.junit.Test
 import org.junit.Assert
+import org.junit.Test
+import com.healthline.scalcium.utils.Tokenizer
 
 class AbbreviationExpanderTest {
 

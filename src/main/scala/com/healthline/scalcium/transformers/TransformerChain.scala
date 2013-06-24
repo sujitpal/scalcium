@@ -1,10 +1,12 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.transformers
 
 import scala.annotation.tailrec
 import scala.collection.mutable.ArrayBuffer
 
 import com.healthline.query.QueryEngine
 import com.healthline.query.kb.HealthConcept
+import com.healthline.scalcium.utils.ConfigUtils
+import com.healthline.scalcium.utils.Tokenizer
 
 case class ConceptScore (
   baseScore: Float,
@@ -28,7 +30,7 @@ case class Doc (
   scores: Map[HealthConcept,Float]
 )
 
-class Transformers {
+class TransformerChain {
   
   val chain = Seq[Function1[Doc,Doc]](
     // operate on raw text

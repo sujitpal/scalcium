@@ -1,6 +1,9 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.transformers
 
+import scala.Array.canBuildFrom
 import scala.util.matching.Regex
+
+import com.healthline.scalcium.utils.Tokenizer
 
 /**
  * Operates on the entire document and replaces in-document

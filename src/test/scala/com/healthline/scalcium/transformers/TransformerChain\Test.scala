@@ -1,9 +1,10 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.transformers
 
 import org.junit.Test
 import com.healthline.util.Config
+import org.junit.Test
 
-class TransformersTest {
+class TransformerChainTest {
 
   @Test def testTransform(): Unit = {
     Config.setConfigDir("/prod/web/config")
@@ -15,7 +16,7 @@ The program has different settings for: simple and blocked randomizations; lengt
 Random Allocation Software enables users to control different attributes of the random allocation sequence and produce qualified lists for parallel group trials.
       """
     val doc = Doc("els", null, null, docBody, null, null, null, null, null, null, null)
-    val chain = new Transformers()
+    val chain = new TransformerChain()
     val odoc = chain.transform(doc)
     Console.println(odoc)
   }

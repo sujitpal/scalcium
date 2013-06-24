@@ -1,4 +1,4 @@
-package com.healthline.scalcium
+package com.healthline.scalcium.utils
 
 import java.io.InputStream
 
@@ -6,14 +6,10 @@ import scala.Array.canBuildFrom
 
 import org.apache.commons.io.IOUtils
 
-import opennlp.tools.chunker.ChunkerME
-import opennlp.tools.chunker.ChunkerModel
-import opennlp.tools.postag.POSModel
-import opennlp.tools.postag.POSTaggerME
-import opennlp.tools.sentdetect.SentenceDetectorME
-import opennlp.tools.sentdetect.SentenceModel
-import opennlp.tools.tokenize.TokenizerME
-import opennlp.tools.tokenize.TokenizerModel
+import opennlp.tools.chunker.{ChunkerME, ChunkerModel}
+import opennlp.tools.postag.{POSModel, POSTaggerME}
+import opennlp.tools.sentdetect.{SentenceDetectorME, SentenceModel}
+import opennlp.tools.tokenize.{TokenizerME, TokenizerModel}
 
 class Tokenizer {
 
