@@ -27,12 +27,14 @@ case class Doc (
   words: List[String],
   title_cp: String,
   body_cp: String,
-  scores: Map[HealthConcept,Float]
+  scores: Map[HealthConcept,Float],
+  context: Map[String,Any]
 )
 
 class TransformerChain {
   
   val chain = Seq[Function1[Doc,Doc]](
+    setContext,
     // operate on raw text
     expandAbbreviations,
     // operate on paragraphs
@@ -68,8 +70,6 @@ class TransformerChain {
 //    setConceptPositions
   )
   
-  val tokenizer = new Tokenizer()
-  
   def transform(doc: Doc): Doc = transform_r(doc, chain)
   
   @tailrec
@@ -85,20 +85,28 @@ class TransformerChain {
   
   ////////////////////////////////////////////////////////////////
   
+  def setContext = (doc: Doc) => {
+    doc.copy(context=ContextSetter.setContext(doc))
+  }
+  
   def expandAbbreviations = (doc: Doc) => {
     if (! shouldPerform(doc, "expandAbbreviations")) doc
-    else doc.copy(body=AbbreviationExpander.expand(doc.body, tokenizer))
+    else doc.copy(body=AbbreviationExpander.expand(doc.body, 
+      doc.context("tokenizer").asInstanceOf[Tokenizer]))
   }
   
   def processParagraphs = (doc: Doc) => {
     if (! shouldPerform(doc, "processParagraphs")) doc
-    else doc.copy(paragraphs=tokenizer.paraTokenize(doc.body))
+    else doc.copy(paragraphs=doc.context("tokenizer").
+      asInstanceOf[Tokenizer].paraTokenize(doc.body))
   }
   
   def processSentences = (doc: Doc) => {
     if (! shouldPerform(doc, "processSentences")) doc
     else {
       val sbuf = new ArrayBuffer[String]()
+      val tokenizer = doc.context("tokenizer").
+        asInstanceOf[Tokenizer]
       doc.paragraphs.foreach(paragraph => {
         val sentences = tokenizer.sentTokenize(paragraph)
         sbuf ++= sentences
@@ -110,6 +118,7 @@ class TransformerChain {
   def handleNegation = (doc: Doc) => {
     if (! shouldPerform(doc, "handleNegation")) doc
     else {
+      val tokenizer = doc.context("tokenizer").asInstanceOf[Tokenizer]
       val osentences = doc.sentences.map(sentence =>
         NegationHandler.maskNegative(sentence, tokenizer))
       doc.copy(sentences=osentences)
@@ -120,6 +129,7 @@ class TransformerChain {
     if (! shouldPerform(doc, "processPhrases")) doc
     else {
       val phbuf = new ArrayBuffer[String]()
+      val tokenizer = doc.context("tokenizer").asInstanceOf[Tokenizer]
       doc.sentences.foreach(sentence => { 
         val phrases = tokenizer.phraseTokenize(sentence)
         phbuf ++= phrases

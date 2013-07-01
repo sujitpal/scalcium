@@ -13,7 +13,7 @@ class NegationHandlerTest {
     "Patient had no family history of diabetes.",
     "While depressed, patient shows no sign of dementia."
   )
-  val tokenizer = new Tokenizer()
+  val tokenizer = Tokenizer.getTokenizer("opennlp")
   
   @Test def testMaskNegative(): Unit = {
     tests.foreach(sentence => {

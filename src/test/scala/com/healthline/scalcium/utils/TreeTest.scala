@@ -4,7 +4,7 @@ import org.junit.Test
 
 class TreeTest {
   
-  val tokenizer = new Tokenizer()
+  val tokenizer = Tokenizer.getTokenizer("opennlp")
   
   @Test def testTreeTokenize(): Unit = {
     val text = """

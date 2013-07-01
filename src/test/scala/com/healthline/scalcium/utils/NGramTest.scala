@@ -5,7 +5,7 @@ import org.junit.{Assert, Test}
 class NGramTest {
 
   val sentence = "Pierre Vinken, 61 years old, will join the board as a nonexecutive director Nov. 29."
-  val tokenizer = new Tokenizer()
+  val tokenizer = Tokenizer.getTokenizer("opennlp")
   val words = tokenizer.wordTokenize(sentence)
   
   @Test def testBigrams(): Unit = {

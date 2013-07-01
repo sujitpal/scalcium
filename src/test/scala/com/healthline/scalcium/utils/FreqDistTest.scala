@@ -29,6 +29,6 @@ class FreqDistTest {
   @Test def testCountAndFreq(): Unit = {
     val counts = fd.keys().map(fd.count(_)).foldLeft(0)(_ + _)
     val freqs = fd.keys().map(fd.freq(_)).foldLeft(0.0F)(_ + _)
-    Assert.assertEquals(counts, freqs * fd.N(), 0.0001F)
+    Assert.assertEquals(counts, (freqs * fd.N()).toInt)
   }
 }
