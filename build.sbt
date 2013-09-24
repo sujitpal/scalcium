@@ -21,6 +21,7 @@ libraryDependencies ++= Seq(
   "org.apache.solr" % "solr-solrj" % "3.5.0",
   "org.apache.commons" % "commons-lang3" % "3.0",
   "net.sourceforge.collections" % "collections-generic" % "4.01",
+  "commons-beanutils" % "commons-beanutils" % "1.8.3",
   "commons-io" % "commons-io" % "2.4",
   "log4j" % "log4j" % "1.2.14",
   "com.novocode" % "junit-interface" % "0.8" % "test"
