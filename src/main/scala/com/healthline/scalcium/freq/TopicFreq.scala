@@ -28,9 +28,14 @@ object TopicFreq extends App {
 
   val InFile = new File("/tmp/topicfreq_0.txt")
   val OutFileRef = new File("/tmp/topicfreq_ref.txt")
+  // corpus topic composition
   val OutFile1 = new File("/tmp/topicfreq_1.txt")
   val OutFile2 = new File("/tmp/topicfreq_2.txt")
   val OutFile3 = new File("/tmp/topicfreq_3.txt")
+  // document topic composition
+  val OutFile4 = new File("/tmp/topicfreq_4.txt")
+  val DocReportFile = new File("/tmp/topicfreq_top10docs.txt")
+  val OutFile5 = new File("/tmp/topicfreq_5.txt")
   
   val PageSize = 10
 
@@ -41,7 +46,7 @@ object TopicFreq extends App {
 
   /////////////// get mapping of related concepts to concepts list /////////////
   val imuids = getTopicImuids(conn)
-//  val rollupMap = buildRollupMap(imuids)
+  val rollupMap = buildRollupMap(imuids)
 
   ///////////////// retrieve data from solr for hl_cms ////////////////////////
 //  retrieve("sourcename:hlcms", "itemtitle,imuids_p,url", InFile)
@@ -51,7 +56,12 @@ object TopicFreq extends App {
 //  rollup(rollupMap, OutFile1, OutFile2)
   
   ///////////////// calculate parents for graph ///////////////////////////////
-  rollupParents(OutFile2, OutFile3)
+//  rollupParents(OutFile2, OutFile3)
+  
+  ///////////////// consolidate documents by topic ////////////////////////////
+//  docRollup(rollupMap, InFile, OutFile4)
+//  printTopNDocs(OutFile4, DocReportFile, 100)
+  numDocsPerTopic(OutFile4, OutFile5, 14003)
   
   conn.close()
   
@@ -194,6 +204,97 @@ object TopicFreq extends App {
     writer.close()
   }
   
+  def docRollup(rollupMap: Map[String,String], infile: File, outfile: File): Unit = {
+    val writer = new PrintWriter(new FileWriter(outfile), true)
+    Source.fromFile(infile)
+          .getLines()
+          .foreach(line => {
+      val Array(title, url, imuidsp) = line.split("\t")
+      val scores = imuidsp.split(" ")
+        .map(idScorePair => {
+          val Array(id, score) = idScorePair.split("\\$")
+          (id, score.toDouble)
+        })
+        .map(idScorePair => 
+          (rollupMap.getOrElse(idScorePair._1, "NOTFOUND"), idScorePair._2))
+        .filter(idScorePair => (! "NOTFOUND".equals(idScorePair._1)))
+        .toList
+        .groupBy(idScorePair => idScorePair._1)
+        .map(kv => (kv._1, kv._2.map(v => v._2).foldLeft(0D)(_ + _)))
+        .toList
+      val sum = scores.map(kv => kv._2.toDouble)
+                      .foldLeft(0D)(_ + _)
+      val normScores = scores.map(kv => (kv._1, kv._2.toDouble / sum))
+                             .toList
+                             .sortWith((a, b) => a._2 > b._2)
+                             .map(kv => kv._1 + ":" + kv._2.toString)
+                             .mkString(" ")
+      writer.println("%s\t%s".format(title, normScores))
+    })
+    writer.flush()
+    writer.close()
+  }
+  
+  def printTopNDocs(infile: File, outfile: File, n: Int): Unit = {
+    val writer = new PrintWriter(new FileWriter(outfile), true)
+    var ln = 0
+    Source.fromFile(infile)
+          .getLines()
+          .foreach(line => {
+      ln += 1
+      if (ln <= n) {
+        if (line.endsWith("\t"))
+          writer.println("%sUNCLASSIFIED\n".format(line))
+        else {
+          val Array(title, vec) = line.split("\t")
+          val printableScores = vec.split(" ").map(idScorePair => { 
+              val Array(id, score) = idScorePair.split(":")
+              val cfn = getCFN(qpe, id)
+              val pcscore = 100.0D * score.toDouble
+              "%s (%5.3f%%)".format(cfn, pcscore)
+            })
+            .mkString("; ")
+          writer.println("%s\n\t%s\n".format(title, printableScores))
+        }
+      }
+    })
+    writer.flush()
+    writer.close()
+  }
+
+  def numDocsPerTopic(infile: File, outfile: File, ndocs: Int): Unit = {
+    val writer = new PrintWriter(new FileWriter(outfile), true)
+    val ndocsPerTopic = scala.collection.mutable.Map[String,Int]()
+    Source.fromFile(infile)
+          .getLines()
+          .foreach(line => {
+      line.split("\t") match {
+        case Array(title, vec) => {
+          vec.split(" ")
+              .map(idScorePair => {
+            val Array(id, score) = idScorePair.split(":")
+            if (ndocsPerTopic.contains(id)) {
+              val currCount = ndocsPerTopic(id)
+              ndocsPerTopic(id) = currCount + 1
+            } else {
+              ndocsPerTopic(id) = 1
+            }
+          })
+        }
+        case _ => 
+      }
+    })
+    ndocsPerTopic.toList
+        .sortWith((a, b) => a._2 > b._2)
+        .foreach(kv => {
+      val cfn = getCFN(qpe, kv._1)
+      val pc = 100.0D * kv._2.toDouble / ndocs.toDouble
+      writer.println("%s (%s)\t%d\t(%5.3f%%)".format(cfn, kv._1, kv._2, pc))
+    })
+    writer.flush()
+    writer.close()
+  }
+
   ///////////////////// (private methods) ///////////////////////////
 
   def _getRelatedImuids(conn: Connection, sql: String, 
