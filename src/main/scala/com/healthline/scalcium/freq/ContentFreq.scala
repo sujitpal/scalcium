@@ -12,7 +12,7 @@ import scala.collection.JavaConversions.mapAsJavaMap
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
-import org.apache.solr.client.solrj.impl.CommonsHttpSolrServer
+import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.common.params.MapSolrParams
 
 import com.healthline.query.QueryEngine
@@ -59,7 +59,7 @@ object ContentFreq extends App {
   """
 
   Config.setConfigDir("/prod/web/config")
-  val server = new CommonsHttpSolrServer("http://sfc-solr01-prod:8080/solr/select")
+  val server = new HttpSolrServer("http://sfc-solr01-prod:8080/solr/select")
   val qpe = QueryEngine.getQueryService()
   val conn = DBConnectionManager.getConnection()
   

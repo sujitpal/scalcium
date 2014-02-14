@@ -1,15 +1,24 @@
 package com.healthline.scalcium.tagger
 
-import java.io.{File, FileWriter, PrintWriter}
+import java.io.File
+import java.io.FileWriter
+import java.io.PrintWriter
+
+import scala.Array.canBuildFrom
+import scala.collection.GenSet
+import scala.collection.JavaConversions.asScalaBuffer
+import scala.collection.JavaConversions.asScalaSet
+import scala.collection.JavaConversions.collectionAsScalaIterable
+import scala.collection.JavaConversions.mapAsJavaMap
 import scala.io.Source
+
+import org.apache.commons.lang3.StringUtils
+import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.common.params.MapSolrParams
-import org.apache.solr.client.solrj.impl.CommonsHttpSolrServer
-import com.healthline.util.Config
+
 import com.healthline.query.QueryEngine
 import com.healthline.query.kb.HealthConcept
-import scala.collection.GenSet
-import scala.collection.JavaConversions._
-import org.apache.commons.lang3.StringUtils
+import com.healthline.util.Config
 
 object AutoTagger extends App {
 
@@ -19,7 +28,7 @@ object AutoTagger extends App {
   val ModelData = new File("/tmp/hlcms_model.txt")
   val TestData = new File("/tmp/hlcms_test.txt")
   val ReportData = new File("/tmp/hlcms_report.txt")
-  val server = new CommonsHttpSolrServer("http://sfc-solr01-prod:8080/solr/select")
+  val server = new HttpSolrServer("http://sfc-solr01-prod:8080/solr/select")
 
   // configurable constants
   val PageSize = 10

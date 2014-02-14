@@ -15,7 +15,7 @@ import scala.collection.TraversableOnce.flattenTraversableOnce
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
-import org.apache.solr.client.solrj.impl.CommonsHttpSolrServer
+import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.common.params.MapSolrParams
 
 import com.healthline.query.QueryEngine
@@ -42,7 +42,7 @@ object TopicFreq extends App {
   Config.setConfigDir("/prod/web/config")
   val qpe = QueryEngine.getQueryService()
   val conn = DBConnectionManager.getConnection()
-  val server = new CommonsHttpSolrServer("http://sfc-solr01-prod:8080/solr/select")
+  val server = new HttpSolrServer("http://sfc-solr01-prod:8080/solr/select")
 
   /////////////// get mapping of related concepts to concepts list /////////////
   val imuids = getTopicImuids(conn)
