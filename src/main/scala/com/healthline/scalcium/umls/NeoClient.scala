@@ -2,11 +2,12 @@ package com.healthline.scalcium.umls
 
 import org.neo4j.rest.graphdb.RestAPIFacade
 import org.neo4j.rest.graphdb.query.RestCypherQueryEngine
-
 import spray.json._
 import DefaultJsonProtocol._
-
 import scala.collection.JavaConversions._
+import java.io.File
+import java.io.PrintWriter
+import java.io.FileWriter
 
 class NeoClient {
 
@@ -94,6 +95,35 @@ class NeoClient {
       }
     }
     return (List(), List(), -1)
+  }
+  
+  def degreeDistrib(inDegree: Boolean, outfile: File): Unit = {
+    val writer = new PrintWriter(new FileWriter(outfile))
+    val cuilist = engine.query("""
+      start n=node(*) return n.cui""", 
+      Map[String,Object]())
+    var numProcessed = 0
+    val x = cuilist.iterator().foreach(row => {
+      numProcessed += 1
+      if (numProcessed % 1000 == 0)
+        Console.println("Processed %d nodes".format(numProcessed))
+      val cui = row("n.cui")
+      val larrow = if (inDegree) "<-" else "-"
+      val rarrow = if (inDegree) "-" else "->"
+      val countQuery = engine.query("""
+        start n=node:concepts(cui={cui}) 
+        match (n)%s[r]%s(m)
+        return n.cui, count(r) as nrels"""
+        .format(larrow, rarrow), 
+        Map(("cui", cui)))
+      val iter = countQuery.iterator()
+      if (iter.hasNext()) {
+        val crow = iter.next()
+        writer.println("%s\t%s".format(crow("n.cui"), crow("nrels")))
+      }
+    })
+    writer.close()
+    writer.flush()
   }
 
   //////////////// methods for internal use //////////////////

@@ -28,6 +28,7 @@ libraryDependencies ++= Seq(
   "org.apache.solr" % "solr-solrj" % "4.6.0",
   "org.neo4j" % "neo4j" % "1.9.6",
   "org.neo4j" % "neo4j-rest-graphdb" % "1.9",
+  "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.10",
   "org.apache.commons" % "commons-lang3" % "3.0",
   "net.sourceforge.collections" % "collections-generic" % "4.01",
   "commons-beanutils" % "commons-beanutils" % "1.8.3",

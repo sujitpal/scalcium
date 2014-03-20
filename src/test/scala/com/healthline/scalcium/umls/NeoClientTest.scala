@@ -2,6 +2,7 @@ package com.healthline.scalcium.umls
 
 import org.junit.Test
 import org.junit.Assert
+import java.io.File
 
 class NeoClientTest {
 
@@ -65,6 +66,14 @@ class NeoClientTest {
     Assert.assertNotNull(shortestPath._2)
     Assert.assertEquals(2, shortestPath._2.size)
     Assert.assertEquals(2, shortestPath._3)
+  }
+  
+  @Test
+  def testDegreeDist(): Unit = {
+    val fin = new File("/tmp/dd_in.csv")
+    client.degreeDistrib(true, fin)
+    val fout = new File("/tmp/dd_out.csv")
+    client.degreeDistrib(false, fout)
   }
   
   def printConcept(concept: Concept): Unit = {
