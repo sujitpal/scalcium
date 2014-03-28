@@ -1,0 +1,27 @@
+qd-bid
+qd
+bid-tid
+bid
+tid-qid
+tid
+qid
+qod
+q2hr
+q4hr
+q4-6hr
+q6hr
+q8hr
+q12hr
+q24hr
+qwk
+qod
+qam
+qpm
+qhs
+qmonth
+q3hr
+q4-6hr
+twice daily
+once a week
+[0-9]+ a day
+[0-9]+ per day

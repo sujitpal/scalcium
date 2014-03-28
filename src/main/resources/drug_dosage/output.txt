@@ -1,0 +1,1019 @@
+##hydrocortizone cream, apply to rash bid
+Name: hydrocortizone cream 
+Dose:  
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+Unparsed words: , -rash 
+ 
+
+
+##albuterol inhaler one to two puffs bid
+Name: albuterol inhaler 
+Dose:  1-2 puffs 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Enteric coated aspirin 81 mg tablets one qd
+Name: Enteric coated aspirin 
+Dose:  81 mg tablets 1 
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Vitamin B12 1000 mcg IM
+Name: Vitamin B12 
+Dose:  1000 mcg 
+Route: IM 
+Freq:  
+Quant:  
+Refill:  
+Directions:  
+
+
+##atenolol 50 mg tabs one qd, #100, one year
+Name: atenolol 
+Dose:  50 mg tabs 1 
+Route:  
+Freq: qd 
+Quant: #100 
+Refill: 1 year 
+Directions:  
+
+
+##metformin 500 mg tablets one bid.  Hold for creatinine greater than 1.4.
+Name: metformin 
+Dose:  500 mg tablets 1 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions: for creatinine 
+Unparsed words:    .  Hold  greater than 1.4.
+ 
+
+
+##Enteric coated aspirin 81 mg tabs one qd, #100, one year
+Name: Enteric coated aspirin 
+Dose:  81 mg tabs 1 
+Route:  
+Freq: qd 
+Quant: #100 
+Refill: 1 year 
+Directions:  
+
+
+##Toprol XL 50 mg po qd
+Name: Toprol XL 
+Dose:  50 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Calcium carbonate 1000 mg po qd
+Name: Calcium carbonate 
+Dose:  1000 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Zyrtec 10 mg po qd
+Name: Zyrtec 
+Dose:  10 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Nasonex 50 mcg one spray each nostril bid
+Name: Nasonex 
+Dose:  50 mcg 1 spray 
+Route: each nostril 
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Dyazide 37.5/25 mg po qd
+Name: Dyazide 
+Dose:  37.5/25 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Quinine sulfate 260 mg po qhs
+Name: Quinine sulfate 
+Dose:  260 mg 
+Route: po 
+Freq: qhs 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Potassium chloride 20 mEq po qd
+Name: Potassium chloride 
+Dose:  20 mEq 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Gemfibrozil 600 mg po bid
+Name: Gemfibrozil 
+Dose:  600 mg 
+Route: po 
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Hydrochlorothiazide 25 mg po qd
+Name: Hydrochlorothiazide 
+Dose:  25 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##aspirin 325 mg po qd
+Name: aspirin 
+Dose:  325 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Vitamin E 800 IU po qd
+Name: Vitamin E 
+Dose:  800 IU 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##EpiPen Autoinjector use as directed prn
+Name: EpiPen Autoinjector 
+Dose:  
+Route: use as directed 
+Freq:  prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Nasacort nasal spray 1 spray in each nostril twice daily given as a sample, no refills
+Name: Nasacort nasal spray 
+Dose:  1 spray 
+Route: each nostril 
+Freq: twice daily 
+Quant:  
+Refill: no refills 
+Directions:  
+Unparsed words:   in   given as a sample, 
+ 
+
+
+##hydrochlorothiazide 25 mg tablets one qd #100 one year.
+Name: hydrochlorothiazide 
+Dose:  25 mg tablets 1 
+Route:  
+Freq: qd 
+Quant: #100 
+Refill: 1 year 
+Directions:  
+
+
+##Vasocon-A eyedrops prn
+Name: Vasocon-A eyedrops 
+Dose:  
+Route:  
+Freq:  prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Methylphenidate 20 mg po bid
+Name: Methylphenidate 
+Dose:  20 mg 
+Route: po 
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Methotrexate, taken once a week.
+Name: Methotrexate 
+Dose:  
+Route:  
+Freq: once a week 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Dovonex applied topically.
+Name: Dovonex 
+Dose:  
+Route:  
+Freq:  
+Quant:  
+Refill:  
+Directions:  
+Unparsed words:  applied topically.
+ 
+
+
+##Advil one to two tablets po prn
+Name: Advil 
+Dose:  1-2 tablets 
+Route: po 
+Freq:  prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Singulair 10 mg po qd
+Name: Singulair 
+Dose:  10 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Serevent 21 mcg one puff bid
+Name: Serevent 
+Dose:  21 mcg 1 puff 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##flovent 110 mcg one puff bid
+Name: flovent 
+Dose:  110 mcg 1 puff 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Voltaren 75 mg po bid
+Name: Voltaren 
+Dose:  75 mg 
+Route: po 
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Xalatan eyedrops one po qhs starting 1 GTT OU qhs
+Name: Xalatan eyedrops 
+Dose: 1  1 GTT 
+Route: po 
+Freq: qhs 
+Quant:  
+Refill:  
+Directions:  
+Unparsed words:     starting  OU 
+ 
+
+
+##Vioxx 25 mg po qd prn
+Name: Vioxx 
+Dose:  25 mg 
+Route: po 
+Freq: qd prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Synthroid 0.025 mg po qd
+Name: Synthroid 
+Dose:  0.025 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##zocor 20 mg po qd
+Name: zocor 
+Dose:  20 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##trimethoprim 200 mg po qd
+Name: trimethoprim 
+Dose:  200 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##xanax 0.5 mg one-half tablet po qhs prn
+Name: xanax 
+Dose:  0.5 mg 0.5 tablet 
+Route: po 
+Freq: qhs prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Sonata 10 mg one to two tablets po qhs from Psychiatry
+Name: Sonata 
+Dose:  10 mg 1-2 tablets 
+Route: po 
+Freq: qhs 
+Quant:  
+Refill:  
+Directions: from Psychiatry 
+
+
+##Neurontin 800 mg po tid from Psychiatry
+Name: Neurontin 
+Dose:  800 mg 
+Route: po 
+Freq: tid 
+Quant:  
+Refill:  
+Directions: from Psychiatry 
+
+
+##Eucerin cream applied qd prn
+Name: Eucerin cream 
+Dose:  
+Route:  
+Freq: qd prn 
+Quant:  
+Refill:  
+Directions:  
+Unparsed words:  applied  
+ 
+
+
+##zocor 10 mg po qd
+Name: zocor 
+Dose:  10 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Fosamax 70 mg po qwk
+Name: Fosamax 
+Dose:  70 mg 
+Route: po 
+Freq: qwk 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Centrum one a day.
+Name: Centrum 
+Dose:  
+Route:  
+Freq: 1 a day 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Caltrate with vitamin D one po bid to tid.
+Name: Caltrate with vitamin D 
+Dose: 1  
+Route: po 
+Freq: bid-tid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Permax 0.25 mg tablets one bid as per Neurology.
+Name: Permax 
+Dose:  0.25 mg tablets 1 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions: as per Neurology 
+
+
+##Clozaril 25 mg tablets one qd as per Psychiatry.
+Name: Clozaril 
+Dose:  25 mg tablets 1 
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions: as per Psychiatry 
+
+
+##Lexapro 20 mg tablets one qd as per Psychiatry.
+Name: Lexapro 
+Dose:  20 mg tablets 1 
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions: as per Psychiatry 
+
+
+##Sinemet 50/200 one tablet tid as per Neurology.
+Name: Sinemet 
+Dose:  1 tablet 
+Route:  
+Freq: tid 
+Quant:  
+Refill:  
+Directions: as per Neurology 
+
+
+##Provigil 200 mg tablets one qd as per Psychiatry
+Name: Provigil 
+Dose:  200 mg tablets 1 
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions: as per Psychiatry 
+
+
+##Zestril 2.5 mg po qd, #90
+Name: Zestril 
+Dose:  2.5 mg 
+Route: po 
+Freq: qd 
+Quant: #90 
+Refill:  
+Directions:  
+
+
+##Budesonide one spray nasal qd prn
+Name: Budesonide 
+Dose:  1 spray 
+Route: nasal 
+Freq: qd prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Anusol HC apply bid prn
+Name: Anusol HC 
+Dose:  
+Route:  
+Freq: bid prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Verapamil SR 240 mg po qd
+Name: Verapamil SR 
+Dose:  240 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Mevacor 20 mg po qd
+Name: Mevacor 
+Dose:  20 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Actonel 35 mg po qwk
+Name: Actonel 
+Dose:  35 mg 
+Route: po 
+Freq: qwk 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Detrol 4 mg po qhs
+Name: Detrol 
+Dose:  4 mg 
+Route: po 
+Freq: qhs 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Caltrate with vitamin D 600 mg po bid
+Name: Caltrate with vitamin D 
+Dose:  600 mg 
+Route: po 
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Centrum Silver one a day
+Name: Centrum Silver 
+Dose:  
+Route:  
+Freq: 1 a day 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Fosamax 35 mg qwk
+Name: Fosamax 
+Dose:  35 mg 
+Route:  
+Freq: qwk 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Isordil 10 mg po tid
+Name: Isordil 
+Dose:  10 mg 
+Route: po 
+Freq: tid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##metoprolol 50 mg bid
+Name: metoprolol 
+Dose:  50 mg 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##amlodipine 10 mg qd
+Name: amlodipine 
+Dose:  10 mg 
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Dyazide one po qd, #90
+Name: Dyazide 
+Dose: 1  
+Route: po 
+Freq: qd 
+Quant: #90 
+Refill:  
+Directions:  
+
+
+##ranitidine 150 mg, #180, one po qd
+Name: ranitidine 
+Dose:  150 mg 
+Route: po 
+Freq: qd 
+Quant: #180 
+Refill:  
+Directions:  
+
+
+##zocor 40 mg po qd
+Name: zocor 
+Dose:  40 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Digoxin 0.125 mg po qd
+Name: Digoxin 
+Dose:  0.125 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Lipitor  20 mg po qd
+Name: Lipitor 
+Dose:  20 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Tiazac 120 mg po qd
+Name: Tiazac 
+Dose:  120 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Propafenone 225 mg po tid
+Name: Propafenone 
+Dose:  225 mg 
+Route: po 
+Freq: tid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Calcium carbonate 1200 mg qd
+Name: Calcium carbonate 
+Dose:  1200 mg 
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Necon qd
+Name: Necon 
+Dose:  
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##flonase one spray nasal bid prn
+Name: flonase 
+Dose:  1 spray 
+Route: nasal 
+Freq: bid prn 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Vitamin E 400 IU po qd
+Name: Vitamin E 
+Dose:  400 IU 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Vitamin D one po qd
+Name: Vitamin D 
+Dose: 1  
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Glyburide 2.5 mg po qd
+Name: Glyburide 
+Dose:  2.5 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Niaspan 1500 mg po qd
+Name: Niaspan 
+Dose:  1500 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##amlodipine 10 mg po qd
+Name: amlodipine 
+Dose:  10 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Colchicine 0.6 mg bid, quantity #60
+Name: Colchicine 
+Dose:  0.6 mg 
+Route:  
+Freq: bid 
+Quant: #60 
+Refill:  
+Directions:  
+
+
+##Calcium 1200 mg.
+Name: Calcium 
+Dose:  1200 mg 
+Route:  
+Freq:  
+Quant:  
+Refill:  
+Directions:  
+
+
+##Tetracycline 250 mg #180 one tablet po bid
+Name: Tetracycline 
+Dose:  250 mg 1 tablet 
+Route: po 
+Freq: bid 
+Quant: #180 
+Refill:  
+Directions:  
+
+
+##Coumadin prn per Coumadin Clinic
+Name: Coumadin 
+Dose:  
+Route:  
+Freq:  prn 
+Quant:  
+Refill:  
+Directions:  
+Unparsed words:   per Coumadin Clinic
+ 
+
+
+##Augmentin 875 bid for 10 days
+Name: Augmentin 
+Dose: 875  
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions: for 10 days 
+
+
+##Lac-Hydrin cream 12% quantity one tube, apply bid
+Name: Lac-Hydrin cream 
+Dose: 12%  
+Route:  
+Freq: bid 
+Quant: 1 tube 
+Refill:  
+Directions:  
+
+
+##Pravachol 20 mg qd, #90 x 3
+Name: Pravachol 
+Dose:  20 mg 
+Route:  
+Freq: qd 
+Quant: 90 
+Refill: 3 
+Directions:  
+
+
+##Avapro 150 mg qd is refilled, #90 x 3.
+Name: Avapro 
+Dose:  150 mg 
+Route:  
+Freq: qd 
+Quant: 90 
+Refill: 3 
+Directions:  
+Unparsed words:    is refilled,  .
+ 
+
+
+##Add Casodex one per day.
+Name: Casodex 
+Dose:  
+Route:  
+Freq: 1 per day 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Add Lupron IM qmonth
+Name: Lupron 
+Dose:  
+Route: IM 
+Freq: qmonth 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Please add Detrol 1 mg po qhs #90, three refills, one po qhs
+Name: Detrol 
+Dose:  1 mg 
+Route: po 
+Freq: qhs 
+Quant: #90 
+Refill: 3 refills 
+Directions:  
+
+
+##cimetidine 20 mg po qd
+Name: cimetidine 
+Dose:  20 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##amlodipine 2.5 mg po qd
+Name: amlodipine 
+Dose:  2.5 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Levoxyl 0.075 mg po qd
+Name: Levoxyl 
+Dose:  0.075 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Niferex one qd
+Name: Niferex 
+Dose: 1  
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Colace one bid
+Name: Colace 
+Dose: 1  
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Calcium with D one qd
+Name: Calcium with D 
+Dose: 1  
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Folic acid one qd
+Name: Folic acid 
+Dose: 1  
+Route:  
+Freq: qd 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Ativan 0.5 mg tid.
+Name: Ativan 
+Dose:  0.5 mg 
+Route:  
+Freq: tid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Ultram 50 mg tid.
+Name: Ultram 
+Dose:  50 mg 
+Route:  
+Freq: tid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Combivent two puffs bid
+Name: Combivent 
+Dose:  2 puffs 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Serevent two puffs bid
+Name: Serevent 
+Dose:  2 puffs 
+Route:  
+Freq: bid 
+Quant:  
+Refill:  
+Directions:  
+
+
+##Robaxin 750 mg po qd for spasms
+Name: Robaxin 
+Dose:  750 mg 
+Route: po 
+Freq: qd 
+Quant:  
+Refill:  
+Directions: for spasms 
+
+
+##Fosamax 70 mg po qwk
+Name: Fosamax 
+Dose:  70 mg 
+Route: po 
+Freq: qwk 
+Quant:  
+Refill:  
+Directions:  
+
+
+100 lines parsed
+92 lines fully parsed
+8 lines with text remaining
