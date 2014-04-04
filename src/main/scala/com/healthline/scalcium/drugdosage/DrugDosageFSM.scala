@@ -72,7 +72,7 @@ class CollectAction(val debug: Boolean) extends Action[String] {
   override def perform(currState: String, token: String): Unit = {
     if (debug)
       Console.println("setting: %s to %s".format(token, currState))
-    stab += ((currState, token))
+    stab += ((token, currState))
   }
 }
 

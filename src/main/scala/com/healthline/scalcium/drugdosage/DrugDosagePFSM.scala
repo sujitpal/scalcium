@@ -9,7 +9,6 @@ class DrugDosagePFSM(val drugFile: File,
     val debug: Boolean = false) {
 
   def parse(s: String): List[(String,String)] = {
-    Console.println("s=" + s)
     val collector = new CollectAction(debug)
     val fsm = buildFSM(collector, debug)
     val x = fsm.run(s.toLowerCase()
@@ -22,7 +21,7 @@ class DrugDosagePFSM(val drugFile: File,
   
   def buildFSM(collector: CollectAction, 
       debug: Boolean): PFSM[String] = {
-    val pfsm = new PFSM[String](collector, true)
+    val pfsm = new PFSM[String](collector, debug)
     
     pfsm.addState("START")
     pfsm.addState("DRUG")
