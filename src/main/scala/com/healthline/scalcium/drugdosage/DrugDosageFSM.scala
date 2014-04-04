@@ -74,11 +74,6 @@ class CollectAction(val debug: Boolean) extends Action[String] {
       Console.println("setting: %s to %s".format(token, currState))
     stab += ((currState, token))
   }
-  
-  def getSymbolTable(): Map[String,List[String]] = {
-    stab.groupBy(kv => kv._1)
-      .map(kv => (kv._1, kv._2.map(_._2).toList))
-  }
 }
 
 class DrugDosageFSM(val drugFile: File, 
@@ -88,8 +83,7 @@ class DrugDosageFSM(val drugFile: File,
     val numPatternsFile: File,
     val debug: Boolean = false) {
 
-  
-  def parse(s: String): Map[String,List[String]] = {
+  def parse(s: String): List[(String,String)] = {
     val collector = new CollectAction(debug)
     val fsm = buildFSM(collector, debug)
     val x = fsm.run(s.toLowerCase()
@@ -97,11 +91,12 @@ class DrugDosageFSM(val drugFile: File,
         .replaceAll("\\s+", " ")
         .split(" ")
         .toList)
-    collector.getSymbolTable()
+    collector.stab.toList
   }
   
-  def buildFSM(collector: CollectAction, debug: Boolean): FSM[String] = {
-    val fsm = new FSM[String](debug)
+  def buildFSM(collector: CollectAction, 
+      debug: Boolean): FSM[String] = {
+    val fsm = new FSM[String](collector, debug)
     // states
     fsm.addState("START")
     fsm.addState("DRUG")
@@ -121,18 +116,18 @@ class DrugDosageFSM(val drugFile: File,
     val refillGuard = new CombinedGuard(unitsFile, numPatternsFile)
     
     // transitions
-    fsm.addTransition("START", "DRUG", drugGuard, collector)
-    fsm.addTransition("DRUG", "DOSAGE", dosageGuard, collector)
-    fsm.addTransition("DRUG", "FREQ", freqGuard, collector)
-    fsm.addTransition("DRUG", "ROUTE", routeGuard, collector)
-    fsm.addTransition("DOSAGE", "ROUTE", routeGuard, collector)
-    fsm.addTransition("DOSAGE", "FREQ", freqGuard, collector)
-    fsm.addTransition("ROUTE", "FREQ", freqGuard, collector)
-    fsm.addTransition("FREQ", "QTY", qtyGuard, collector)
-    fsm.addTransition("FREQ", "END", noGuard, collector)
-    fsm.addTransition("QTY", "REFILL", refillGuard, collector)
-    fsm.addTransition("QTY", "END", noGuard, collector)
-    fsm.addTransition("REFILL", "END", noGuard, collector)
+    fsm.addTransition("START", "DRUG", drugGuard)
+    fsm.addTransition("DRUG", "DOSAGE", dosageGuard)
+    fsm.addTransition("DRUG", "FREQ", freqGuard)
+    fsm.addTransition("DRUG", "ROUTE", routeGuard)
+    fsm.addTransition("DOSAGE", "ROUTE", routeGuard)
+    fsm.addTransition("DOSAGE", "FREQ", freqGuard)
+    fsm.addTransition("ROUTE", "FREQ", freqGuard)
+    fsm.addTransition("FREQ", "QTY", qtyGuard)
+    fsm.addTransition("FREQ", "END", noGuard)
+    fsm.addTransition("QTY", "REFILL", refillGuard)
+    fsm.addTransition("QTY", "END", noGuard)
+    fsm.addTransition("REFILL", "END", noGuard)
     
     fsm
   }

@@ -26,10 +26,8 @@ class DrugDosageFSMTest {
       .foreach(line => {
          val stab = ddFSM.parse(line)
          writer.println(line)
-         stab.toList
-           .sortBy(kv => kv._1)
-           .foreach(kv => 
-             writer.println(kv._1 + ": " + kv._2.mkString(" ")))
+         writer.println(stab.map(st => st._2 + "/" + st._1)
+           .mkString(" "))
          writer.println()
     })
     writer.flush()
