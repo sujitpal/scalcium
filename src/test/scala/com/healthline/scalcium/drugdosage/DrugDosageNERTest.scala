@@ -10,7 +10,7 @@ import org.junit.Test
 
 class DrugDosageNERTest {
 
-  val datadir = "/home/sujit/Projects/med_data/drug_dosage"
+  val datadir = "src/main/resources/drug_dosage"
 
   @Test
   @Ignore

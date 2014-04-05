@@ -11,7 +11,7 @@ import org.junit.Test
 
 class NERTest {
 
-  val datadir = "/home/sujit/Projects/med_data/drug_dosage"
+  val datadir = "src/main/resources/drug_dosage"
     
   @Test
   def testDictNERTag(): Unit = {

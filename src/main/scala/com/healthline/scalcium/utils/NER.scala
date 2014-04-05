@@ -2,9 +2,11 @@ package com.healthline.scalcium.utils
 
 import java.io.File
 import java.util.regex.Pattern
+
 import scala.collection.JavaConversions.asScalaIterator
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
+
 import com.aliasi.chunk.CharLmHmmChunker
 import com.aliasi.chunk.Chunk
 import com.aliasi.chunk.HmmChunker
@@ -15,7 +17,6 @@ import com.aliasi.dict.MapDictionary
 import com.aliasi.hmm.HmmCharLmEstimator
 import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory
 import com.aliasi.util.AbstractExternalizable
-import com.aliasi.chunk.ChunkerEvaluator
 
 trait NER {
   

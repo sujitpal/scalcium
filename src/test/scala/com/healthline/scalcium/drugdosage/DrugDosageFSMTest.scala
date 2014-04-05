@@ -8,7 +8,7 @@ import java.io.FileWriter
 
 class DrugDosageFSMTest {
 
-  val datadir = "/home/sujit/Projects/med_data/drug_dosage"
+  val datadir = "src/main/resources/drug_dosage"
     
   @Test
   def testParse(): Unit = {
