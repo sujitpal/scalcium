@@ -11,8 +11,8 @@ case class Offset(val start: Int, val end: Int) {
   def None = Offset(-1,-1)
 }
 
-class NegexAnnotator(ruleFile: File, 
-    responses: List[String]) {
+class NegexAnnotator(val ruleFile: File, 
+    val responses: List[String]) {
 
   val rules = sortRules(ruleFile)
   
