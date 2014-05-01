@@ -1,4 +1,4 @@
-package com.healthline.scalcium.drugdosage
+package com.mycompany.scalcium.drugdosage
 
 import java.io.File
 

@@ -1,4 +1,4 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
 import scala.collection.JavaConversions.bufferAsJavaList
 import scala.collection.mutable.ArrayBuffer

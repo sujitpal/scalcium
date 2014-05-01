@@ -1,4 +1,4 @@
-package com.healthline.scalcium.drugdosage
+package com.mycompany.scalcium.drugdosage
 
 import java.io.File
 import java.io.FileWriter
@@ -11,9 +11,9 @@ import scala.io.Source
 import org.junit.Ignore
 import org.junit.Test
 
-import com.healthline.scalcium.utils.DictNER
-import com.healthline.scalcium.utils.NGram
-import com.healthline.scalcium.utils.RegexNER
+import com.mycompany.scalcium.utils.DictNER
+import com.mycompany.scalcium.utils.NGram
+import com.mycompany.scalcium.utils.RegexNER
 
 class DrugDosagePFSMTest {
 

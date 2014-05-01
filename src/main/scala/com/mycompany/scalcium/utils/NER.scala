@@ -1,4 +1,4 @@
-package com.healthline.scalcium.utils
+package com.mycompany.scalcium.utils
 
 import java.io.File
 import java.util.regex.Pattern

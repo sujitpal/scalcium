@@ -1,6 +1,6 @@
-package com.healthline.scalcium.drugdosage
+package com.mycompany.scalcium.drugdosage
 
-import com.healthline.scalcium.utils.PFSM
+import com.mycompany.scalcium.utils.PFSM
 import java.io.File
 
 class DrugDosagePFSM(val drugFile: File, 

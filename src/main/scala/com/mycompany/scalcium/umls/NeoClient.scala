@@ -1,4 +1,4 @@
-package com.healthline.scalcium.umls
+package com.mycompany.scalcium.umls
 
 import org.neo4j.rest.graphdb.RestAPIFacade
 import org.neo4j.rest.graphdb.query.RestCypherQueryEngine

@@ -1,4 +1,4 @@
-package com.healthline.scalcium.drugdosage
+package com.mycompany.scalcium.drugdosage
 
 import java.io.File
 import java.util.regex.Pattern
@@ -7,9 +7,9 @@ import scala.collection.TraversableOnce.flattenTraversableOnce
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
-import com.healthline.scalcium.utils.Action
-import com.healthline.scalcium.utils.FSM
-import com.healthline.scalcium.utils.Guard
+import com.mycompany.scalcium.utils.Action
+import com.mycompany.scalcium.utils.FSM
+import com.mycompany.scalcium.utils.Guard
 
 class BoolGuard(val refValue: Boolean) extends Guard[String] {
   override def accept(token: String): Boolean = refValue

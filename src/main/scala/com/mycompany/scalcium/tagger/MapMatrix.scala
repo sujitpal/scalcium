@@ -1,4 +1,4 @@
-package com.healthline.scalcium.tagger
+package com.mycompany.scalcium.tagger
 
 import scala.Array.fallbackCanBuildFrom
 

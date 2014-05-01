@@ -1,4 +1,4 @@
-package com.healthline.scalcium.drugdosage
+package com.mycompany.scalcium.drugdosage
 
 import java.io.File
 import java.io.FileWriter
@@ -9,9 +9,9 @@ import scala.collection.TraversableOnce.flattenTraversableOnce
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
-import com.healthline.scalcium.utils.DictNER
-import com.healthline.scalcium.utils.ModelNER
-import com.healthline.scalcium.utils.RegexNER
+import com.mycompany.scalcium.utils.DictNER
+import com.mycompany.scalcium.utils.ModelNER
+import com.mycompany.scalcium.utils.RegexNER
 
 class DrugDosageNER(val modelFile: File,
     val debug: Boolean = false) {

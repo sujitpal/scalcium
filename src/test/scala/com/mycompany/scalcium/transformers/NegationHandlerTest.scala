@@ -1,9 +1,9 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
 import org.junit.Test
 import org.junit.Assert
 import org.junit.Test
-import com.healthline.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.utils.Tokenizer
 
 class NegationHandlerTest {
   

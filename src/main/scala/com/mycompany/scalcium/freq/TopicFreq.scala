@@ -1,4 +1,4 @@
-package com.healthline.scalcium.freq
+package com.mycompany.scalcium.freq
 
 import java.io.File
 import java.io.FileWriter

@@ -1,4 +1,4 @@
-package com.healthline.scalcium.utils
+package com.mycompany.scalcium.utils
 
 object Logger {
   def getLogger(name: String): Logger = {

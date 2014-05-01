@@ -1,4 +1,4 @@
-package com.healthline.scalcium.umls
+package com.mycompany.scalcium.umls
 
 import java.io.File
 import java.io.StringReader

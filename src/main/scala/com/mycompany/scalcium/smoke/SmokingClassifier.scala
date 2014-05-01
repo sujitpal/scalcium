@@ -1,4 +1,4 @@
-package com.healthline.scalcium.smoke
+package com.mycompany.scalcium.smoke
 
 import java.io.BufferedReader
 import java.io.File

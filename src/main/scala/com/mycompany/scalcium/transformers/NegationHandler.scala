@@ -1,9 +1,9 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
 import scala.io.Source
 import scala.util.control.Breaks.{break, breakable}
 
-import com.healthline.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.utils.Tokenizer
 
 object NegationHandler {
 

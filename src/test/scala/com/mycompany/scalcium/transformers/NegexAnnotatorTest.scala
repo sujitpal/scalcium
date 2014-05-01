@@ -1,4 +1,4 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
 import java.io.File
 import scala.io.Source

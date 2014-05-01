@@ -1,8 +1,8 @@
-package com.healthline.scalcium.smoke
+package com.mycompany.scalcium.smoke
 
 import java.util.regex.Pattern
 import org.apache.lucene.analysis.core.StopAnalyzer
-import com.healthline.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.utils.Tokenizer
 
 class Preprocessor {
 

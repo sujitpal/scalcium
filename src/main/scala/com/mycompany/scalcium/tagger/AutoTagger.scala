@@ -1,4 +1,4 @@
-package com.healthline.scalcium.tagger
+package com.mycompany.scalcium.tagger
 
 import java.io.File
 import java.io.FileWriter

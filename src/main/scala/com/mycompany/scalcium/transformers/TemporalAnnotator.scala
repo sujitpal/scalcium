@@ -1,4 +1,4 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
 import java.io.File
 import java.util.regex.Pattern
@@ -13,7 +13,7 @@ import com.aliasi.dict.DictionaryEntry
 import com.aliasi.dict.ExactDictionaryChunker
 import com.aliasi.dict.MapDictionary
 import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory
-import com.healthline.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.utils.Tokenizer
 
 class TemporalAnnotator(val tempoWNFile: File) {
 

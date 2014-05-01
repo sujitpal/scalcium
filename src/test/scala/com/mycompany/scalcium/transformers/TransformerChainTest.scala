@@ -1,4 +1,4 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
 import org.junit.Test
 import com.healthline.util.Config

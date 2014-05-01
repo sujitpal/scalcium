@@ -1,8 +1,8 @@
-package com.healthline.scalcium.transformers
+package com.mycompany.scalcium.transformers
 
-import com.healthline.scalcium.utils.Tokenizer
-import com.healthline.scalcium.utils.ConfigUtils
-import com.healthline.scalcium.utils.Logger
+import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.utils.ConfigUtils
+import com.mycompany.scalcium.utils.Logger
 
 /**
  * Sets the document with objects it will need to carry

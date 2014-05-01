@@ -1,4 +1,4 @@
-package com.healthline.scalcium.utils
+package com.mycompany.scalcium.utils
 
 class Tree(val root: String, val children: List[Tree]) {
 

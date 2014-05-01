@@ -1,4 +1,4 @@
-package com.healthline.scalcium.smoke
+package com.mycompany.scalcium.smoke
 
 import org.junit.Test
 import java.io.File
