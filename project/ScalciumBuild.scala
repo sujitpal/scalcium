@@ -10,7 +10,7 @@ object ScalciumBuild extends Build {
       name := "scalcium",
       organization := "com.healthline",
       version := "0.1-SNAPSHOT",
-      scalaVersion := "2.9.2"
+      scalaVersion := "2.11.1"
       // add other settings here
     )
   )
