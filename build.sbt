@@ -13,12 +13,15 @@ unmanagedClasspath in Runtime <+= (baseDirectory) map {
 }
 
 resolvers ++= Seq(
-  "Neo4j-Contrib" at "http://m2.neo4j.org/content/groups/everything"
+  "Neo4j-Contrib" at "http://m2.neo4j.org/content/groups/everything",
+  "Sonatype OSS Releases"  at "http://oss.sonatype.org/content/repositories/releases/",
+  "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
+  "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases"
 )
 
-
 libraryDependencies ++= Seq(
-  "org.scala-lang" % "scala-xml" % "2.11.0-M4",
+  "org.scala-lang.modules" %% "scala-xml" % "1.0.2",
+  "org.scalaz.stream" %% "scalaz-stream" % "0.4.1",
   "org.apache.opennlp" % "opennlp-maxent" % "3.0.3",
   "org.apache.opennlp" % "opennlp-tools" % "1.5.3",
   "org.apache.lucene" % "lucene-core" % "4.6.0",
@@ -28,6 +31,7 @@ libraryDependencies ++= Seq(
   "org.apache.solr" % "solr-solrj" % "4.6.0",
   "org.neo4j" % "neo4j" % "1.9.6",
   "org.neo4j" % "neo4j-rest-graphdb" % "1.9",
+  "com.github.jenshaase.uimascala" %% "uimascala-core" % "0.5.0-SNAPSHOT",
   "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.10",
   "org.apache.commons" % "commons-lang3" % "3.0",
   "net.sourceforge.collections" % "collections-generic" % "4.01",
@@ -37,3 +41,6 @@ libraryDependencies ++= Seq(
   "log4j" % "log4j" % "1.2.14",
   "com.novocode" % "junit-interface" % "0.8" % "test"
 )
+
+addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
+
