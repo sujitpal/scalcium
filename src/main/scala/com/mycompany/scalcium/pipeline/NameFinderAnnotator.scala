@@ -18,11 +18,9 @@ class NameFinderAnnotator extends SCasAnnotator_ImplBase {
     // people annotations
     val allPersons = namefinder.find(namefinder.personME, sentences)
     applyAnnotations(jcas, allPersons, sentences, soffsets, "PER")
-    namefinder.clear(namefinder.personME)
     // organization annotations
     val allOrgs = namefinder.find(namefinder.orgME, sentences)
     applyAnnotations(jcas, allOrgs, sentences, soffsets, "ORG")
-    namefinder.clear(namefinder.orgME)
   }
   
   def applyAnnotations(jcas: JCas, 

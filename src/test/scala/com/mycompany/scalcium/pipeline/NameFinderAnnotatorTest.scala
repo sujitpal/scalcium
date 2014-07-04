@@ -16,10 +16,10 @@ class NameFinderAnnotatorTest {
     jcas.setDocumentText(text)
     ae.process(jcas)
     JCasUtil.select(jcas, classOf[Entity]).foreach(entity => {
-      Console.println("(" + entity.getBegin() + ", " + 
-        entity.getEnd() + "): " +
-        text.substring(entity.getBegin(), entity.getEnd()) + 
-        "/" + entity.getEntityType())
+      Console.println("(%d, %d): %s/%s".format(
+        entity.getBegin(), entity.getEnd(),
+        text.substring(entity.getBegin(), entity.getEnd()),
+        entity.getEntityType()))
     })
   }
 }

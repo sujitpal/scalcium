@@ -19,15 +19,15 @@ class NameFinder {
   
   def find(finder: NameFinderME, doc: List[String]): 
       List[List[(String,Int,Int)]] = {
-	try {
+    try {
       doc.map(sent => find(finder, sent))
-	} finally {
-	  clear(finder)
-	}
+    } finally {
+      clear(finder)
+    }
   }
   
   def find(finder: NameFinderME, sent: String): 
-	  List[(String,Int,Int)] = {
+    List[(String,Int,Int)] = {
     val words = tokenizer.wordTokenize(sent)
                          .toArray
     finder.find(words).map(span => {
@@ -46,7 +46,7 @@ class NameFinder {
       pfin = new FileInputStream(new File(ModelDir, model))
       new NameFinderME(new TokenNameFinderModel(pfin))
     } finally {
-	  IOUtils.closeQuietly(pfin)
+    IOUtils.closeQuietly(pfin)
     }
   }
 }
