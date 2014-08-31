@@ -8,7 +8,7 @@ class NameFinderTest {
   val sentences = List(
     "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .",
     "Mr . Vinken is chairman of Elsevier N.V. , the Dutch publishing group .",
-    "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a director of this British industrial conglomerate ."    
+    "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a director of this British industrial conglomerate ."
   )
   
   @Test

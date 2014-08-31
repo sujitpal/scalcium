@@ -1,0 +1,100 @@
+hydrocortizone/DRUG cream/DRUG ,/O apply/ROUTE to/O rash/O bid/FREQ
+albuterol/DRUG inhaler/DRUG one/NUM to/O two/NUM puffs/UNIT bid/FREQ
+Enteric/DRUG coated/DRUG aspirin/DRUG 81/NUM mg/UNIT tablets/UNIT one/NUM qd/FREQ
+Vitamin/DRUG B12/DRUG 1000/NUM mcg/UNIT IM/ROUTE
+atenolol/DRUG 50/NUM mg/UNIT tabs/UNIT one/NUM qd/FREQ ,/O #100,/NUM one/O year/NUM
+metformin/DRUG 500/NUM mg/UNIT tablets/UNIT one/NUM bid/FREQ ./NUM
+Enteric/DRUG coated/DRUG aspirin/DRUG 81/NUM mg/UNIT tabs/UNIT one/NUM qd/FREQ ,/O #100,/NUM one/O year/NUM
+Toprol/DRUG XL/DRUG 50/NUM mg/UNIT po/ROUTE qd/FREQ
+Calcium/DRUG carbonate/DRUG 1000/NUM mg/UNIT po/ROUTE qd/FREQ
+Zyrtec/DRUG 10/NUM mg/UNIT po/ROUTE qd/FREQ
+Nasonex/DRUG 50/NUM mcg/UNIT one/NUM spray/UNIT each/ROUTE nostril/ROUTE bid/FREQ
+Dyazide/DRUG 37.5/25/NUM mg/UNIT po/ROUTE qd/FREQ
+Quinine/DRUG sulfate/DRUG 260/NUM mg/UNIT po/ROUTE qhs/FREQ
+Potassium/DRUG chloride/DRUG 20/NUM mEq/UNIT po/ROUTE qd/FREQ
+Gemfibrozil/DRUG 600/NUM mg/UNIT po/ROUTE bid/FREQ
+Hydrochlorothiazide/DRUG 25/NUM mg/UNIT po/ROUTE qd/FREQ
+aspirin/DRUG 325/NUM mg/UNIT po/ROUTE qd/FREQ
+Vitamin/DRUG E/DRUG 800/NUM IU/UNIT po/ROUTE qd/FREQ
+EpiPen/DRUG Autoinjector/DRUG use/ROUTE as/ROUTE directed/ROUTE prn/O
+Nasacort/DRUG nasal/DRUG spray/DRUG 1/NUM spray/UNIT in/O each/ROUTE nostril/ROUTE twice/FREQ daily/FREQ given/O as/O a/O sample,/O no/O refills/UNIT
+hydrochlorothiazide/DRUG 25/NUM mg/UNIT tablets/UNIT one/NUM qd/FREQ #100/O one/NUM year./NUM
+Vasocon-A/DRUG eyedrops/DRUG prn/O
+Methylphenidate/DRUG 20/NUM mg/UNIT po/ROUTE bid/FREQ
+Methotrexate,/DRUG taken/O once/O a/FREQ week/FREQ ./FREQ
+Dovonex/DRUG applied/NUM topically./O
+Advil/DRUG one/NUM to/O two/NUM tablets/UNIT po/ROUTE prn/O
+Singulair/DRUG 10/NUM mg/UNIT po/ROUTE qd/FREQ
+Serevent/DRUG 21/NUM mcg/UNIT one/NUM puff/UNIT bid/FREQ
+flovent/DRUG 110/NUM mcg/UNIT one/NUM puff/UNIT bid/FREQ
+Voltaren/DRUG 75/NUM mg/UNIT po/ROUTE bid/FREQ
+Xalatan/DRUG eyedrops/DRUG one/NUM po/ROUTE qhs/FREQ starting/O 1/NUM GTT/UNIT OU/ROUTE qhs/FREQ
+Vioxx/DRUG 25/NUM mg/UNIT po/ROUTE qd/FREQ prn/O
+Synthroid/DRUG 0.025/NUM mg/UNIT po/ROUTE qd/FREQ
+zocor/DRUG 20/NUM mg/UNIT po/ROUTE qd/FREQ
+trimethoprim/DRUG 200/NUM mg/UNIT po/ROUTE qd/FREQ
+xanax/DRUG 0.5/NUM mg/UNIT one-half/NUM tablet/UNIT po/ROUTE qhs/FREQ prn/O
+Sonata/DRUG 10/NUM mg/UNIT one/NUM to/O two/NUM tablets/UNIT po/ROUTE qhs/FREQ from/O Psychiatry/O
+Neurontin/DRUG 800/NUM mg/UNIT po/ROUTE tid/FREQ from/O Psychiatry/O
+Eucerin/DRUG cream/DRUG applied/O qd/FREQ prn/O
+zocor/DRUG 10/NUM mg/UNIT po/ROUTE qd/FREQ
+Fosamax/DRUG 70/NUM mg/UNIT po/ROUTE qwk/FREQ
+Centrum/DRUG one/NUM a/O day./O
+Caltrate/DRUG with/DRUG vitamin/DRUG D/DRUG one/NUM po/ROUTE bid/FREQ to/O tid/FREQ ./NUM
+Permax/DRUG 0.25/NUM mg/UNIT tablets/UNIT one/NUM bid/FREQ as/O per/O Neurology./O
+Clozaril/DRUG 25/NUM mg/UNIT tablets/UNIT one/NUM qd/FREQ as/O per/O Psychiatry./O
+Lexapro/DRUG 20/NUM mg/UNIT tablets/UNIT one/NUM qd/FREQ as/O per/O Psychiatry./O
+Sinemet/DRUG 50/200/NUM one/NUM tablet/UNIT tid/FREQ as/O per/O Neurology./O
+Provigil/DRUG 200/NUM mg/UNIT tablets/UNIT one/NUM qd/FREQ as/O per/O Psychiatry/O
+Zestril/DRUG 2.5/NUM mg/UNIT po/ROUTE qd/FREQ ,/O #90/NUM
+Budesonide/DRUG one/NUM spray/UNIT nasal/ROUTE qd/FREQ prn/O
+Anusol/DRUG HC/DRUG apply/ROUTE bid/FREQ prn/O
+Verapamil/DRUG SR/DRUG 240/NUM mg/UNIT po/ROUTE qd/FREQ
+Mevacor/DRUG 20/NUM mg/UNIT po/ROUTE qd/FREQ
+Actonel/DRUG 35/NUM mg/UNIT po/ROUTE qwk/FREQ
+Detrol/DRUG 4/NUM mg/UNIT po/ROUTE qhs/FREQ
+Caltrate/DRUG with/DRUG vitamin/DRUG D/DRUG 600/NUM mg/UNIT po/ROUTE bid/FREQ
+Centrum/DRUG Silver/DRUG one/NUM a/O day/O
+Fosamax/DRUG 35/NUM mg/UNIT qwk/FREQ
+Isordil/DRUG 10/NUM mg/UNIT po/ROUTE tid/FREQ
+metoprolol/DRUG 50/NUM mg/UNIT bid/FREQ
+amlodipine/DRUG 10/NUM mg/UNIT qd/FREQ
+Dyazide/DRUG one/NUM po/ROUTE qd/FREQ ,/O #90/NUM
+ranitidine/DRUG 150/NUM mg/UNIT ,/O #180,/NUM one/O po/ROUTE qd/FREQ
+zocor/DRUG 40/NUM mg/UNIT po/ROUTE qd/FREQ
+Digoxin/DRUG 0.125/NUM mg/UNIT po/ROUTE qd/FREQ
+Lipitor/DRUG 20/NUM mg/UNIT po/ROUTE qd/FREQ
+Tiazac/DRUG 120/NUM mg/UNIT po/ROUTE qd/FREQ
+Propafenone/DRUG 225/NUM mg/UNIT po/ROUTE tid/FREQ
+Calcium/DRUG carbonate/DRUG 1200/NUM mg/UNIT qd/FREQ
+Necon/DRUG qd/FREQ
+flonase/DRUG one/NUM spray/UNIT nasal/ROUTE bid/FREQ prn/O
+Vitamin/DRUG E/DRUG 400/NUM IU/UNIT po/ROUTE qd/FREQ
+Vitamin/DRUG D/DRUG one/NUM po/ROUTE qd/FREQ
+Glyburide/DRUG 2.5/NUM mg/UNIT po/ROUTE qd/FREQ
+Niaspan/DRUG 1500/NUM mg/UNIT po/ROUTE qd/FREQ
+amlodipine/DRUG 10/NUM mg/UNIT po/ROUTE qd/FREQ
+Colchicine/DRUG 0.6/NUM mg/UNIT bid/FREQ ,/O quantity/O #60/NUM
+Calcium/DRUG 1200/NUM mg/UNIT ./NUM
+Tetracycline/DRUG 250/NUM mg/UNIT #180/O one/NUM tablet/UNIT po/ROUTE bid/FREQ
+Coumadin/DRUG prn/O per/O Coumadin/DRUG Clinic/O
+Augmentin/DRUG 875/NUM bid/FREQ for/O 10/NUM days/O
+Lac-Hydrin/DRUG cream/DRUG 12%/NUM quantity/O one/O tube,/NUM apply/ROUTE bid/FREQ
+Pravachol/DRUG 20/NUM mg/UNIT qd/FREQ ,/O #90/NUM x/O 3/NUM
+Avapro/DRUG 150/NUM mg/UNIT qd/FREQ is/O refilled,/O #90/O x/NUM 3./O
+Add/O Casodex/DRUG one/NUM per/O day./O
+Add/O Lupron/DRUG IM/ROUTE qmonth/FREQ
+Please/O add/O Detrol/DRUG 1/NUM mg/UNIT po/ROUTE qhs/FREQ #90,/O three/NUM refills/UNIT ,/O one/O po/ROUTE qhs/FREQ
+cimetidine/DRUG 20/NUM mg/UNIT po/ROUTE qd/FREQ
+amlodipine/DRUG 2.5/NUM mg/UNIT po/ROUTE qd/FREQ
+Levoxyl/DRUG 0.075/NUM mg/UNIT po/ROUTE qd/FREQ
+Niferex/DRUG one/NUM qd/FREQ
+Colace/DRUG one/NUM bid/FREQ
+Calcium/DRUG with/DRUG D/DRUG one/NUM qd/FREQ
+Folic/DRUG acid/DRUG one/NUM qd/FREQ
+Ativan/DRUG 0.5/NUM mg/UNIT tid/FREQ ./NUM
+Ultram/DRUG 50/NUM mg/UNIT tid/FREQ ./NUM
+Combivent/DRUG two/NUM puffs/UNIT bid/FREQ
+Serevent/DRUG two/NUM puffs/UNIT bid/FREQ
+Robaxin/DRUG 750/NUM mg/UNIT po/ROUTE qd/FREQ for/O spasms/O
+Fosamax/DRUG 70/NUM mg/UNIT po/ROUTE qwk/FREQ

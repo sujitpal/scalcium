@@ -1,0 +1,300 @@
+hydrocortizone cream, apply to rash bid
+DRUG/hydrocortizone DRUG/cream ROUTE/apply ROUTE/to ROUTE/rash FREQ/bid
+
+albuterol inhaler one to two puffs bid
+DRUG/albuterol DRUG/inhaler DOSAGE/one DOSAGE/to DOSAGE/two DOSAGE/puffs FREQ/bid
+
+Enteric coated aspirin 81 mg tablets one qd
+DRUG/enteric DRUG/coated DRUG/aspirin DOSAGE/81 DOSAGE/mg DOSAGE/tablets DOSAGE/one FREQ/qd
+
+Vitamin B12 1000 mcg IM
+DRUG/vitamin DRUG/b12 DOSAGE/1000 DOSAGE/mcg ROUTE/im
+
+atenolol 50 mg tabs one qd, #100, one year
+DRUG/atenolol DOSAGE/50 DOSAGE/mg DOSAGE/tabs DOSAGE/one FREQ/qd FREQ/#100 QTY/one QTY/year
+
+metformin 500 mg tablets one bid.  
+DRUG/metformin DOSAGE/500 DOSAGE/mg DOSAGE/tablets DOSAGE/one DOSAGE/bid.
+
+Enteric coated aspirin 81 mg tabs one qd, #100, one year
+DRUG/enteric DRUG/coated DRUG/aspirin DOSAGE/81 DOSAGE/mg DOSAGE/tabs DOSAGE/one FREQ/qd FREQ/#100 QTY/one QTY/year
+
+Toprol XL 50 mg po qd
+DRUG/toprol DRUG/xl DOSAGE/50 DOSAGE/mg ROUTE/po FREQ/qd
+
+Calcium carbonate 1000 mg po qd
+DRUG/calcium DRUG/carbonate DOSAGE/1000 DOSAGE/mg ROUTE/po FREQ/qd
+
+Zyrtec 10 mg po qd
+DRUG/zyrtec DOSAGE/10 DOSAGE/mg ROUTE/po FREQ/qd
+
+Nasonex 50 mcg one spray each nostril bid
+DRUG/nasonex DOSAGE/50 DOSAGE/mcg DOSAGE/one DOSAGE/spray ROUTE/each ROUTE/nostril FREQ/bid
+
+Dyazide 37.5/25 mg po qd
+DRUG/dyazide DOSAGE/37.5/25 DOSAGE/mg ROUTE/po FREQ/qd
+
+Quinine sulfate 260 mg po qhs
+DRUG/quinine DRUG/sulfate DOSAGE/260 DOSAGE/mg ROUTE/po FREQ/qhs
+
+Potassium chloride 20 mEq po qd
+DRUG/potassium DRUG/chloride DOSAGE/20 DOSAGE/meq ROUTE/po FREQ/qd
+
+Gemfibrozil 600 mg po bid
+DRUG/gemfibrozil DOSAGE/600 DOSAGE/mg ROUTE/po FREQ/bid
+
+Hydrochlorothiazide 25 mg po qd
+DRUG/hydrochlorothiazide DOSAGE/25 DOSAGE/mg ROUTE/po FREQ/qd
+
+aspirin 325 mg po qd
+DRUG/aspirin DOSAGE/325 DOSAGE/mg ROUTE/po FREQ/qd
+
+Vitamin E 800 IU po qd
+DRUG/vitamin DRUG/e DOSAGE/800 DOSAGE/iu ROUTE/po FREQ/qd
+
+EpiPen Autoinjector use as directed prn
+DRUG/epipen DRUG/autoinjector ROUTE/use ROUTE/as ROUTE/directed ROUTE/prn
+
+Nasacort nasal spray 1 spray in each nostril twice daily given as a sample, no refills
+DRUG/nasacort ROUTE/nasal ROUTE/spray ROUTE/1 ROUTE/spray ROUTE/in ROUTE/each ROUTE/nostril FREQ/twice FREQ/daily FREQ/given FREQ/as FREQ/a FREQ/sample FREQ/no FREQ/refills
+
+hydrochlorothiazide 25 mg tablets one qd #100 one year.
+DRUG/hydrochlorothiazide DOSAGE/25 DOSAGE/mg DOSAGE/tablets DOSAGE/one FREQ/qd FREQ/#100 QTY/one QTY/year.
+
+Vasocon-A eyedrops prn
+DRUG/vasocon-a DRUG/eyedrops DRUG/prn
+
+Methylphenidate 20 mg po bid
+DRUG/methylphenidate DOSAGE/20 DOSAGE/mg ROUTE/po FREQ/bid
+
+Methotrexate, taken once a week.
+DRUG/methotrexate DRUG/taken FREQ/once FREQ/a FREQ/week.
+
+Dovonex applied topically.
+DRUG/dovonex DRUG/applied DRUG/topically.
+
+Advil one to two tablets po prn
+DRUG/advil DOSAGE/one DOSAGE/to DOSAGE/two DOSAGE/tablets ROUTE/po ROUTE/prn
+
+Singulair 10 mg po qd
+DRUG/singulair DOSAGE/10 DOSAGE/mg ROUTE/po FREQ/qd
+
+Serevent 21 mcg one puff bid
+DRUG/serevent DOSAGE/21 DOSAGE/mcg DOSAGE/one DOSAGE/puff FREQ/bid
+
+flovent 110 mcg one puff bid
+DRUG/flovent DOSAGE/110 DOSAGE/mcg DOSAGE/one DOSAGE/puff FREQ/bid
+
+Voltaren 75 mg po bid
+DRUG/voltaren DOSAGE/75 DOSAGE/mg ROUTE/po FREQ/bid
+
+Xalatan eyedrops one po qhs starting 1 GTT OU qhs
+DRUG/xalatan DRUG/eyedrops DOSAGE/one ROUTE/po FREQ/qhs FREQ/starting QTY/1 REFILL/gtt REFILL/ou REFILL/qhs
+
+Vioxx 25 mg po qd prn
+DRUG/vioxx DOSAGE/25 DOSAGE/mg ROUTE/po FREQ/qd FREQ/prn
+
+Synthroid 0.025 mg po qd
+DRUG/synthroid DOSAGE/0.025 DOSAGE/mg ROUTE/po FREQ/qd
+
+zocor 20 mg po qd
+DRUG/zocor DOSAGE/20 DOSAGE/mg ROUTE/po FREQ/qd
+
+trimethoprim 200 mg po qd
+DRUG/trimethoprim DOSAGE/200 DOSAGE/mg ROUTE/po FREQ/qd
+
+xanax 0.5 mg one-half tablet po qhs prn
+DRUG/xanax DOSAGE/0.5 DOSAGE/mg DOSAGE/one-half DOSAGE/tablet ROUTE/po FREQ/qhs FREQ/prn
+
+Sonata 10 mg one to two tablets po qhs from Psychiatry
+DRUG/sonata DOSAGE/10 DOSAGE/mg DOSAGE/one DOSAGE/to DOSAGE/two DOSAGE/tablets ROUTE/po FREQ/qhs FREQ/from FREQ/psychiatry
+
+Neurontin 800 mg po tid from Psychiatry
+DRUG/neurontin DOSAGE/800 DOSAGE/mg ROUTE/po FREQ/tid FREQ/from FREQ/psychiatry
+
+Eucerin cream applied qd prn
+DRUG/eucerin DRUG/cream DRUG/applied FREQ/qd FREQ/prn
+
+zocor 10 mg po qd
+DRUG/zocor DOSAGE/10 DOSAGE/mg ROUTE/po FREQ/qd
+
+Fosamax 70 mg po qwk
+DRUG/fosamax DOSAGE/70 DOSAGE/mg ROUTE/po FREQ/qwk
+
+Centrum one a day.
+DRUG/centrum DOSAGE/one FREQ/a FREQ/day.
+
+Caltrate with vitamin D one po bid to tid.
+DRUG/caltrate DRUG/with DRUG/vitamin DRUG/d DOSAGE/one ROUTE/po FREQ/bid FREQ/to FREQ/tid.
+
+Permax 0.25 mg tablets one bid as per Neurology.
+DRUG/permax DOSAGE/0.25 DOSAGE/mg DOSAGE/tablets DOSAGE/one FREQ/bid FREQ/as FREQ/per FREQ/neurology.
+
+Clozaril 25 mg tablets one qd as per Psychiatry.
+DRUG/clozaril DOSAGE/25 DOSAGE/mg DOSAGE/tablets DOSAGE/one FREQ/qd FREQ/as FREQ/per FREQ/psychiatry.
+
+Lexapro 20 mg tablets one qd as per Psychiatry.
+DRUG/lexapro DOSAGE/20 DOSAGE/mg DOSAGE/tablets DOSAGE/one FREQ/qd FREQ/as FREQ/per FREQ/psychiatry.
+
+Sinemet 50/200 one tablet tid as per Neurology.
+DRUG/sinemet DOSAGE/50/200 DOSAGE/one DOSAGE/tablet FREQ/tid FREQ/as FREQ/per FREQ/neurology.
+
+Provigil 200 mg tablets one qd as per Psychiatry
+DRUG/provigil DOSAGE/200 DOSAGE/mg DOSAGE/tablets DOSAGE/one FREQ/qd FREQ/as FREQ/per FREQ/psychiatry
+
+Zestril 2.5 mg po qd, #90
+DRUG/zestril DOSAGE/2.5 DOSAGE/mg ROUTE/po FREQ/qd FREQ/#90
+
+Budesonide one spray nasal qd prn
+DRUG/budesonide DOSAGE/one DOSAGE/spray ROUTE/nasal FREQ/qd FREQ/prn
+
+Anusol HC apply bid prn
+DRUG/anusol DRUG/hc ROUTE/apply FREQ/bid FREQ/prn
+
+Verapamil SR 240 mg po qd
+DRUG/verapamil DRUG/sr DOSAGE/240 DOSAGE/mg ROUTE/po FREQ/qd
+
+Mevacor 20 mg po qd
+DRUG/mevacor DOSAGE/20 DOSAGE/mg ROUTE/po FREQ/qd
+
+Actonel 35 mg po qwk
+DRUG/actonel DOSAGE/35 DOSAGE/mg ROUTE/po FREQ/qwk
+
+Detrol 4 mg po qhs
+DRUG/detrol DOSAGE/4 DOSAGE/mg ROUTE/po FREQ/qhs
+
+Caltrate with vitamin D 600 mg po bid
+DRUG/caltrate DRUG/with DRUG/vitamin DRUG/d DOSAGE/600 DOSAGE/mg ROUTE/po FREQ/bid
+
+Centrum Silver one a day
+DRUG/centrum DRUG/silver DOSAGE/one FREQ/a FREQ/day
+
+Fosamax 35 mg qwk
+DRUG/fosamax DOSAGE/35 DOSAGE/mg FREQ/qwk
+
+Isordil 10 mg po tid
+DRUG/isordil DOSAGE/10 DOSAGE/mg ROUTE/po FREQ/tid
+
+metoprolol 50 mg bid
+DRUG/metoprolol DOSAGE/50 DOSAGE/mg FREQ/bid
+
+amlodipine 10 mg qd
+DRUG/amlodipine DOSAGE/10 DOSAGE/mg FREQ/qd
+
+Dyazide one po qd, #90
+DRUG/dyazide DOSAGE/one ROUTE/po FREQ/qd FREQ/#90
+
+ranitidine 150 mg, #180, one po qd
+DRUG/ranitidine DOSAGE/150 DOSAGE/mg DOSAGE/#180 DOSAGE/one ROUTE/po FREQ/qd
+
+zocor 40 mg po qd
+DRUG/zocor DOSAGE/40 DOSAGE/mg ROUTE/po FREQ/qd
+
+Digoxin 0.125 mg po qd
+DRUG/digoxin DOSAGE/0.125 DOSAGE/mg ROUTE/po FREQ/qd
+
+Lipitor  20 mg po qd
+DRUG/lipitor DOSAGE/20 DOSAGE/mg ROUTE/po FREQ/qd
+
+Tiazac 120 mg po qd
+DRUG/tiazac DOSAGE/120 DOSAGE/mg ROUTE/po FREQ/qd
+
+Propafenone 225 mg po tid
+DRUG/propafenone DOSAGE/225 DOSAGE/mg ROUTE/po FREQ/tid
+
+Calcium carbonate 1200 mg qd
+DRUG/calcium DRUG/carbonate DOSAGE/1200 DOSAGE/mg FREQ/qd
+
+Necon qd
+DRUG/necon FREQ/qd
+
+flonase one spray nasal bid prn
+DRUG/flonase DOSAGE/one DOSAGE/spray ROUTE/nasal FREQ/bid FREQ/prn
+
+Vitamin E 400 IU po qd
+DRUG/vitamin DRUG/e DOSAGE/400 DOSAGE/iu ROUTE/po FREQ/qd
+
+Vitamin D one po qd
+DRUG/vitamin DRUG/d DOSAGE/one ROUTE/po FREQ/qd
+
+Glyburide 2.5 mg po qd
+DRUG/glyburide DOSAGE/2.5 DOSAGE/mg ROUTE/po FREQ/qd
+
+Niaspan 1500 mg po qd
+DRUG/niaspan DOSAGE/1500 DOSAGE/mg ROUTE/po FREQ/qd
+
+amlodipine 10 mg po qd
+DRUG/amlodipine DOSAGE/10 DOSAGE/mg ROUTE/po FREQ/qd
+
+Colchicine 0.6 mg bid, quantity #60
+DRUG/colchicine DOSAGE/0.6 DOSAGE/mg FREQ/bid FREQ/quantity FREQ/#60
+
+Calcium 1200 mg.
+DRUG/calcium DOSAGE/1200 DOSAGE/mg.
+
+Tetracycline 250 mg #180 one tablet po bid
+DRUG/tetracycline DOSAGE/250 DOSAGE/mg DOSAGE/#180 DOSAGE/one DOSAGE/tablet ROUTE/po FREQ/bid
+
+Coumadin prn per Coumadin Clinic
+DRUG/coumadin DRUG/prn FREQ/per FREQ/coumadin FREQ/clinic
+
+Augmentin 875 bid for 10 days
+DRUG/augmentin DOSAGE/875 FREQ/bid FREQ/for QTY/10 QTY/days
+
+Lac-Hydrin cream 12% quantity one tube, apply bid
+DRUG/lac-hydrin DRUG/cream DRUG/12% DRUG/quantity DOSAGE/one DOSAGE/tube ROUTE/apply FREQ/bid
+
+Pravachol 20 mg qd, #90 x 3
+DRUG/pravachol DOSAGE/20 DOSAGE/mg FREQ/qd FREQ/#90 FREQ/x QTY/3
+
+Avapro 150 mg qd is refilled, #90 x 3.
+DRUG/avapro DOSAGE/150 DOSAGE/mg FREQ/qd FREQ/is FREQ/refilled FREQ/#90 FREQ/x QTY/3.
+
+Add Casodex one per day.
+START/add DRUG/casodex DOSAGE/one FREQ/per FREQ/day.
+
+Add Lupron IM qmonth
+START/add DRUG/lupron ROUTE/im FREQ/qmonth
+
+Please add Detrol 1 mg po qhs #90, three refills, one po qhs
+START/please START/add DRUG/detrol DOSAGE/1 DOSAGE/mg ROUTE/po FREQ/qhs FREQ/#90 FREQ/three FREQ/refills QTY/one QTY/po QTY/qhs
+
+cimetidine 20 mg po qd
+DRUG/cimetidine DOSAGE/20 DOSAGE/mg ROUTE/po FREQ/qd
+
+amlodipine 2.5 mg po qd
+DRUG/amlodipine DOSAGE/2.5 DOSAGE/mg ROUTE/po FREQ/qd
+
+Levoxyl 0.075 mg po qd
+DRUG/levoxyl DOSAGE/0.075 DOSAGE/mg ROUTE/po FREQ/qd
+
+Niferex one qd
+DRUG/niferex DOSAGE/one FREQ/qd
+
+Colace one bid
+DRUG/colace DOSAGE/one FREQ/bid
+
+Calcium with D one qd
+DRUG/calcium DRUG/with DRUG/d DOSAGE/one FREQ/qd
+
+Folic acid one qd
+DRUG/folic DRUG/acid DOSAGE/one FREQ/qd
+
+Ativan 0.5 mg tid.
+DRUG/ativan DOSAGE/0.5 DOSAGE/mg DOSAGE/tid.
+
+Ultram 50 mg tid.
+DRUG/ultram DOSAGE/50 DOSAGE/mg DOSAGE/tid.
+
+Combivent two puffs bid
+DRUG/combivent DOSAGE/two DOSAGE/puffs FREQ/bid
+
+Serevent two puffs bid
+DRUG/serevent DOSAGE/two DOSAGE/puffs FREQ/bid
+
+Robaxin 750 mg po qd for spasms
+DRUG/robaxin DOSAGE/750 DOSAGE/mg ROUTE/po FREQ/qd FREQ/for FREQ/spasms
+
+Fosamax 70 mg po qwk
+DRUG/fosamax DOSAGE/70 DOSAGE/mg ROUTE/po FREQ/qwk
+
