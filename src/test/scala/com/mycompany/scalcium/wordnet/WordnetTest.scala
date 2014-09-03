@@ -4,7 +4,6 @@ import java.io.File
 import org.junit.Assert
 import org.junit.Test
 import net.didion.jwnl.data.POS
-import com.mycompany.scalcium.wordnet.Wordnet
 
 class WordnetTest {
 

@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Wed Sep 03 09:13:19 PDT 2014 */
+/* First created by JCasGen Wed Sep 03 09:26:42 PDT 2014 */
 package com.mycompany.scalcium.pipeline;
 
 import org.apache.uima.jcas.JCas;
@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Wed Sep 03 09:13:19 PDT 2014
+ * Updated by JCasGen Wed Sep 03 09:26:42 PDT 2014
  * @generated */
 public class Entity_Type extends Annotation_Type {
   /** @generated 
