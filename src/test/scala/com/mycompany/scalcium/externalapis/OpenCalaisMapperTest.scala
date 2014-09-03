@@ -1,9 +1,10 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.externalapis
 
 import org.junit.Test
 import java.io.File
 import scala.collection.JavaConversions._
 import org.junit.Assert
+import com.mycompany.scalcium.externalapis.OpenCalaisMapper
 
 class OpenCalaisMapperTest {
 

@@ -1,9 +1,11 @@
-package com.mycompany.scalcium.pipeline
+package com.mycompany.scalcium.names
 
 import org.junit.Test
 import org.apache.uima.fit.factory.AnalysisEngineFactory
 import org.apache.uima.fit.util.JCasUtil
 import scala.collection.JavaConversions._
+import com.mycompany.scalcium.pipeline.Entity
+import com.mycompany.scalcium.pipeline.NameFinderAnnotator
 
 class NameFinderAnnotatorTest {
 

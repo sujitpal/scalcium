@@ -1,14 +1,10 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.wordnet
 
 import java.io.File
 import java.io.FileInputStream
-
 import scala.Array.canBuildFrom
-import scala.collection.JavaConversions.asScalaBuffer
-import scala.collection.JavaConversions.asScalaIterator
 import scala.collection.TraversableOnce.flattenTraversableOnce
 import scala.collection.mutable.ArrayBuffer
-
 import edu.cmu.lti.jawjaw.util.WordNetUtil
 import edu.cmu.lti.lexical_db.NictWordNet
 import edu.cmu.lti.lexical_db.data.Concept
@@ -20,7 +16,6 @@ import edu.cmu.lti.ws4j.impl.Lin
 import edu.cmu.lti.ws4j.impl.Path
 import edu.cmu.lti.ws4j.impl.Resnik
 import edu.cmu.lti.ws4j.impl.WuPalmer
-
 import net.didion.jwnl.JWNL
 import net.didion.jwnl.data.IndexWord
 import net.didion.jwnl.data.POS
@@ -31,6 +26,7 @@ import net.didion.jwnl.data.Word
 import net.didion.jwnl.data.list.PointerTargetNode
 import net.didion.jwnl.data.list.PointerTargetNodeList
 import net.didion.jwnl.dictionary.Dictionary
+import scala.collection.JavaConversions._
 
 class Wordnet(val wnConfig: File) {
 

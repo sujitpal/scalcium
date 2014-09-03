@@ -1,15 +1,14 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.names
 
 import java.io.File
 import java.io.FileInputStream
-
 import org.apache.commons.io.IOUtils
-
 import opennlp.tools.namefind.NameFinderME
 import opennlp.tools.namefind.TokenNameFinderModel
-import opennlp.tools.util.Span
+import scala.Array.canBuildFrom
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
-class NameFinder {
+class OpenNLPNameFinder {
 
   val ModelDir = "src/main/resources/opennlp/models"
   

@@ -2,11 +2,10 @@ package com.mycompany.scalcium.transformers
 
 import scala.annotation.tailrec
 import scala.collection.mutable.ArrayBuffer
-
 import com.healthline.query.QueryEngine
 import com.healthline.query.kb.HealthConcept
 import com.mycompany.scalcium.utils.ConfigUtils
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 case class ConceptScore (
   baseScore: Float,

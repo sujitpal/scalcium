@@ -1,4 +1,4 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.externalapis
 
 import java.io.File
 import mx.bigdata.jcalais.rest.CalaisRestClient

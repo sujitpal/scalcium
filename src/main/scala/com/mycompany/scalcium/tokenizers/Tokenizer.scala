@@ -1,4 +1,4 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.tokenizers
 
 object Tokenizer {
   def getTokenizer(name: String): Tokenizer = {

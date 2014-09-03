@@ -2,18 +2,16 @@ package com.mycompany.scalcium.transformers
 
 import java.io.File
 import java.util.regex.Pattern
-
 import scala.Array.canBuildFrom
 import scala.collection.JavaConversions.asScalaIterator
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
-
 import com.aliasi.chunk.Chunker
 import com.aliasi.dict.DictionaryEntry
 import com.aliasi.dict.ExactDictionaryChunker
 import com.aliasi.dict.MapDictionary
 import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 class TemporalAnnotator(val tempoWNFile: File) {
 

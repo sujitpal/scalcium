@@ -2,13 +2,13 @@ package com.mycompany.scalcium.pipeline
 
 import org.apache.uima.jcas.JCas
 import com.github.jenshaase.uimascala.core.SCasAnnotator_ImplBase
-import com.mycompany.scalcium.utils.NameFinder
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.names.OpenNLPNameFinder
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 class NameFinderAnnotator extends SCasAnnotator_ImplBase {
 
   val tokenizer = Tokenizer.getTokenizer("opennlp")
-  val namefinder = new NameFinder()
+  val namefinder = new OpenNLPNameFinder()
   
   override def process(jcas: JCas): Unit = {
     val text = jcas.getDocumentText()

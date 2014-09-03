@@ -3,7 +3,7 @@ package com.mycompany.scalcium.transformers
 import org.junit.Test
 import org.junit.Assert
 import org.junit.Test
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 class NegationHandlerTest {
   

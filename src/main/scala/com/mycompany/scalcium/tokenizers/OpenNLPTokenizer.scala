@@ -1,11 +1,8 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.tokenizers
 
 import java.io.InputStream
-
 import scala.Array.canBuildFrom
-
 import org.apache.commons.io.IOUtils
-
 import opennlp.tools.chunker.{ChunkerME, ChunkerModel}
 import opennlp.tools.postag.{POSModel, POSTaggerME}
 import opennlp.tools.sentdetect.{SentenceDetectorME, SentenceModel}

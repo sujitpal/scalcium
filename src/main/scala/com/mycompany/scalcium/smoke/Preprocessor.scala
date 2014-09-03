@@ -2,7 +2,7 @@ package com.mycompany.scalcium.smoke
 
 import java.util.regex.Pattern
 import org.apache.lucene.analysis.core.StopAnalyzer
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 class Preprocessor {
 

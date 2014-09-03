@@ -1,4 +1,4 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.tokenizers
 
 import org.junit.Test
 import org.junit.Assert

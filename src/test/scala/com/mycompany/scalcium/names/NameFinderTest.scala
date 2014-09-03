@@ -1,4 +1,4 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.names
 
 import org.junit.Test
 import org.junit.Assert
@@ -7,13 +7,13 @@ class NameFinderTest {
 
   val sentences = List(
     "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .",
-    "Mr . Vinken is chairman of Elsevier N.V. , the Dutch publishing group .",
+    "Mr . Vinken is chairman of Elsevier N.V. , the Dutch publishing group based at Amsterdam .",
     "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a director of this British industrial conglomerate ."
   )
   
   @Test
-  def testNameFinder(): Unit = {
-    val nf = new NameFinder()
+  def testOpenNLPNameFinder(): Unit = {
+    val nf = new OpenNLPNameFinder()
     val people = nf.find(nf.personME, sentences).flatMap(x => x)
     Console.println("people=" + people)
     Assert.assertEquals(3, people.size)

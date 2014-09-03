@@ -1,16 +1,13 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.tokenizers
 
-import java.io.File
-
-import scala.collection.JavaConversions.{asScalaBuffer, asScalaSet, bufferAsJavaList, seqAsJavaList}
 import scala.collection.immutable.List
 import scala.collection.mutable.ArrayBuffer
-
 import com.aliasi.chunk.{ChunkFactory, Chunker, Chunking, ChunkingImpl}
 import com.aliasi.hmm.{HiddenMarkovModel, HmmDecoder}
 import com.aliasi.sentences.{IndoEuropeanSentenceModel, SentenceChunker}
 import com.aliasi.tokenizer.{IndoEuropeanTokenizerFactory, TokenizerFactory}
 import com.aliasi.util.{AbstractExternalizable, FastCache, Strings}
+import scala.collection.JavaConversions._
 
 class LingPipeTokenizer extends Tokenizer {
 

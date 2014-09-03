@@ -2,8 +2,7 @@ package com.mycompany.scalcium.transformers
 
 import scala.io.Source
 import scala.util.control.Breaks.{break, breakable}
-
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 object NegationHandler {
 

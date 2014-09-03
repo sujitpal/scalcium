@@ -2,8 +2,7 @@ package com.mycompany.scalcium.transformers
 
 import scala.Array.canBuildFrom
 import scala.util.matching.Regex
-
-import com.mycompany.scalcium.utils.Tokenizer
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 /**
  * Operates on the entire document and replaces in-document

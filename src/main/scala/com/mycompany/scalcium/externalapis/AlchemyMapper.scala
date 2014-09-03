@@ -1,9 +1,8 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.externalapis
 
 import java.io.File
 import scala.io.Source
 import scala.collection.JavaConversions._
-import org.apache.commons.lang.builder.ToStringStyle
 import com.likethecolor.alchemy.api.Client
 import com.likethecolor.alchemy.api.call.RankedNamedEntitiesCall
 import com.likethecolor.alchemy.api.call.`type`.CallTypeText

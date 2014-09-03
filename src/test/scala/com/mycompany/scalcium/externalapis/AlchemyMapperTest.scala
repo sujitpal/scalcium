@@ -1,8 +1,9 @@
-package com.mycompany.scalcium.utils
+package com.mycompany.scalcium.externalapis
 
 import org.junit.Test
 import java.io.File
 import org.junit.Assert
+import com.mycompany.scalcium.externalapis.AlchemyMapper
 
 class AlchemyMapperTest {
 

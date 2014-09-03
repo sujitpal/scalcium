@@ -1,8 +1,8 @@
 package com.mycompany.scalcium.transformers
 
-import com.mycompany.scalcium.utils.Tokenizer
 import com.mycompany.scalcium.utils.ConfigUtils
 import com.mycompany.scalcium.utils.Logger
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 /**
  * Sets the document with objects it will need to carry

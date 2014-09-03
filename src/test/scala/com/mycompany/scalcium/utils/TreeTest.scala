@@ -1,6 +1,7 @@
 package com.mycompany.scalcium.utils
 
 import org.junit.Test
+import com.mycompany.scalcium.tokenizers.Tokenizer
 
 class TreeTest {
   

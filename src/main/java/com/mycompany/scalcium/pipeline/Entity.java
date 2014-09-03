@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Aug 04 14:20:40 PDT 2014 */
+/* First created by JCasGen Wed Sep 03 09:13:19 PDT 2014 */
 package com.mycompany.scalcium.pipeline;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Aug 04 14:20:40 PDT 2014
+ * Updated by JCasGen Wed Sep 03 09:13:19 PDT 2014
  * XML source: /home/sujit/Projects/scalcium/src/main/resources/desc/types/TypeSystem.xml
  * @generated */
 public class Entity extends Annotation {
