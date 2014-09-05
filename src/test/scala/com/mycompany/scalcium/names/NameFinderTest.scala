@@ -32,7 +32,7 @@ class NameFinderTest {
     val names = nf.find(sentences)
     prettyPrint("Stanford", sentences, names)
     Assert.assertEquals(3, names.size)
-    Assert.assertEquals(1, names(0).size)
+    Assert.assertEquals(3, names(0).size)
     Assert.assertEquals("PERSON", names(0)(0)._1)
     Assert.assertEquals(0, names(0)(0)._2)
     Assert.assertEquals(13, names(0)(0)._3)
