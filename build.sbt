@@ -23,6 +23,8 @@ libraryDependencies ++= Seq(
   "org.scalaz.stream" %% "scalaz-stream" % "0.4.1",
   "org.apache.opennlp" % "opennlp-maxent" % "3.0.3",
   "org.apache.opennlp" % "opennlp-tools" % "1.5.3",
+  "edu.stanford.nlp" % "stanford-corenlp" % "3.4.1",
+  "edu.stanford.nlp" % "stanford-corenlp" % "3.4.1" classifier "models",
   "org.apache.lucene" % "lucene-core" % "4.6.0",
   "org.apache.lucene" % "lucene-queries" % "4.6.0",
   "org.apache.lucene" % "lucene-analyzers-common" % "4.6.0",

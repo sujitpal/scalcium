@@ -2,8 +2,11 @@ package com.mycompany.scalcium.tokenizers
 
 object Tokenizer {
   def getTokenizer(name: String): Tokenizer = {
-    if ("opennlp".equalsIgnoreCase(name)) new OpenNLPTokenizer()
-    else new LingPipeTokenizer()
+    name.toLowerCase() match {
+      case "opennlp" => new OpenNLPTokenizer()
+      case "lingpipe" => new LingPipeTokenizer()
+      case "stanford" => new StanfordTokenizer()
+    }
   }
 }
 
