@@ -66,16 +66,21 @@ class StanfordTokenizer extends Tokenizer {
   def extractChunks(tree: Tree, chunks: ArrayBuffer[(String,String)]): Unit = {
     tree.children().map(child => {
       val tag = child.value()
-      if (child.isPhrasal()) {
-        // concatenate leaves under this to form phrase
+      if (child.isPhrasal() && hasOnlyLeaves(child)) {
+        // concatenate words into phrase if the children of this
+        // phrase are leaves (not phrases themselves)
         val phrase = child.getLeaves[Tree]()
           .flatMap(leaf => leaf.yieldWords())
           .map(word => word.word())
           .mkString(" ")
         chunks += ((phrase, tag))
+      } else {
+    	// dig deeper
+    	extractChunks(child, chunks)
       }
-      // dig deeper
-      extractChunks(child, chunks)
     })
   }
+  
+  def hasOnlyLeaves(tree: Tree): Boolean = 
+    tree.children().filter(child => child.isPhrasal()).size == 0
 }

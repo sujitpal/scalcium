@@ -97,7 +97,7 @@ class TokenizerTest {
     val phrases = stanfordTokenizer.phraseTokenize(sentences(0))
     Console.println("Phrase Tokenize :: Stanford")
     phrases.foreach(Console.println(_))
-    Assert.assertEquals(11, phrases.length)
+    Assert.assertEquals(5, phrases.length)
   }
   
   @Test 
