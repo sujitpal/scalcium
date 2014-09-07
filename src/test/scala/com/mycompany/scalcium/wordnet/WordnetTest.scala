@@ -494,10 +494,14 @@ class WordnetTest {
     Console.println(">>> cat = wn.synset('cat.n.01')")
     Console.println(">>> hit = wn.synset('hit.v.01')")
     Console.println(">>> slap = wn.synset('slap.v.01')")
+    Console.println(">>> car = wn.synset('car.n.01')")
+    Console.println(">>> bus = wn.synset('bus.n.01')")
     val dog = wn.synset("dog", POS.NOUN, 1)
     val cat = wn.synset("cat", POS.NOUN, 1)
     val hit = wn.synset("hit", POS.VERB, 1)
     val slap = wn.synset("slap", POS.VERB, 1)
+    val car = wn.synset("car", POS.NOUN, 1)
+    val bus = wn.synset("bus", POS.NOUN, 1)
     
     Console.println(">>> dog.path_similarity(cat)")
     val dogCatPathSimilarity = wn.pathSimilarity(dog, cat) 
@@ -541,6 +545,11 @@ class WordnetTest {
     val dogCatLinSimilarity = wn.linSimilarity(dog, cat)
     Console.println(dogCatLinSimilarity)
     Assert.assertEquals(0.886D, dogCatLinSimilarity, 0.01D)
+    
+    Console.println(">>> car.lesk_similarity(bus)")
+    val carBusLeskSimilarity = wn.leskSimilarity(car, bus)
+    Console.println(carBusLeskSimilarity)
+    Assert.assertEquals(6.0D, carBusLeskSimilarity, 0.01D)
   }
   
   /**
