@@ -13,7 +13,9 @@ unmanagedClasspath in Runtime <+= (baseDirectory) map {
 }
 
 resolvers ++= Seq(
-  "Neo4j-Contrib" at "http://m2.neo4j.org/content/groups/everything",
+  // TODO: for dl4j until 0.0.3.2 is up on maven central
+  "Local Maven Repo" at "file://" + Path.userHome.absolutePath + "/.m2/repository",
+  "Neo4j-Contrib" at "https://raw.github.com/neo4j-contrib/m2/master/releases",
   "Sonatype OSS Releases"  at "http://oss.sonatype.org/content/repositories/releases/",
   "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
   "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases"
@@ -32,14 +34,20 @@ libraryDependencies ++= Seq(
   "org.apache.solr" % "solr-solrj" % "4.6.0",
   "org.neo4j" % "neo4j" % "1.9.6",
   "org.neo4j" % "neo4j-rest-graphdb" % "1.9",
-  "com.github.jenshaase.uimascala" %% "uimascala-core" % "0.5.0-SNAPSHOT",
+  //"com.github.jenshaase.uimascala" %% "uimascala-core" % "0.5.0-SNAPSHOT",
+  //"org.apache.uima" % "uimafit-core" % "2.1.0",
+  //"org.apache.uima" % "uimaj-tools" % "2.6.0",
   "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.10",
   "mx.bigdata.jcalais" % "j-calais" % "1.0",
   "com.likethecolor" % "alchemy" % "1.1.2",
-  "org.deeplearning4j" % "deeplearning4j-core" % "0.0.3.2-SNAPSHOT",
-//  "org.deeplearning4j" % "deeplearning4j-scaleout-akka" % "0.0.3.2-SNAPSHOT",
-//  "org.deeplearning4j" % "deeplearning4j-scaleout-akka-word2vec" % "0.0.3.2-SNAPSHOT",
   "org.apache.commons" % "commons-lang3" % "3.0",
+  "org.apache.commons" % "commons-math3" % "3.0",
+  "org.encog" % "encog-core" % "3.2.0",
+  "org.deeplearning4j" % "deeplearning4j-core" % "0.0.3.2-SNAPSHOT",
+  "org.deeplearning4j" % "deeplearning4j-scaleout-akka" % "0.0.3.2-SNAPSHOT",
+  "org.deeplearning4j" % "deeplearning4j-scaleout-akka-word2vec" % "0.0.3.2-SNAPSHOT",
+  "org.nd4j" % "nd4j-api" % "0.0.3.2",
+  "org.nd4j" % "nd4j-jcublas" % "0.0.3.2",
   "net.sourceforge.collections" % "collections-generic" % "4.01",
   "commons-beanutils" % "commons-beanutils" % "1.8.3",
   "commons-io" % "commons-io" % "2.4",
