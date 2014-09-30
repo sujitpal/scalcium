@@ -500,8 +500,10 @@ class WordnetTest {
     val cat = wn.synset("cat", POS.NOUN, 1)
     val hit = wn.synset("hit", POS.VERB, 1)
     val slap = wn.synset("slap", POS.VERB, 1)
-    val car = wn.synset("car", POS.NOUN, 1)
-    val bus = wn.synset("bus", POS.NOUN, 1)
+    //val car = wn.synset("car", POS.NOUN, 1)
+    //val bus = wn.synset("bus", POS.NOUN, 1)
+    val car = wn.synset("weak", POS.ADJECTIVE, 1)
+    val bus = wn.synset("physical", POS.ADJECTIVE, 1)
     
     Console.println(">>> dog.path_similarity(cat)")
     val dogCatPathSimilarity = wn.pathSimilarity(dog, cat) 
