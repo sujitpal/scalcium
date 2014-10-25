@@ -6,7 +6,7 @@ name := "scalcium"
 
 version := "0.1"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.10.4"
 
 unmanagedClasspath in Runtime <+= (baseDirectory) map {
   bd => Attributed.blank(bd / "src/main/resources")
@@ -15,6 +15,7 @@ unmanagedClasspath in Runtime <+= (baseDirectory) map {
 resolvers ++= Seq(
   // TODO: for dl4j until 0.0.3.2 is up on maven central
   "Local Maven Repo" at "file://" + Path.userHome.absolutePath + "/.m2/repository",
+  "Bliki Repo" at "http://gwtwiki.googlecode.com/svn/maven-repository/",
   "Neo4j-Contrib" at "https://raw.github.com/neo4j-contrib/m2/master/releases",
   "Sonatype OSS Releases"  at "http://oss.sonatype.org/content/repositories/releases/",
   "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
@@ -46,11 +47,16 @@ libraryDependencies ++= Seq(
   "org.deeplearning4j" % "deeplearning4j-core" % "0.0.3.2",
   "org.deeplearning4j" % "deeplearning4j-scaleout-akka" % "0.0.3.2",
   "org.deeplearning4j" % "deeplearning4j-nlp" % "0.0.3.2",
-  "org.nd4j" % "nd4j-api" % "0.0.3.2",
-  "org.nd4j" % "nd4j-jblas" % "0.0.3.2",
-  "net.sourceforge.collections" % "collections-generic" % "4.01",
+  "org.nd4j" % "nd4j-api" % "0.0.3.5-SNAPSHOT",
+  "org.nd4j" % "nd4j-jblas" % "0.0.3.5-SNAPSHOT",
+  "info.bliki.wiki" % "bliki-core" % "3.0.19",
+  "net.htmlparser.jericho" % "jericho-html" % "3.3",
+  "edu.washington.cs.knowitall" % "reverb-core" % "1.4.0",
+  "org.apache.jena" % "apache-jena-libs" % "2.12.1",
+  "commons-httpclient" % "commons-httpclient" % "3.1",
   "commons-beanutils" % "commons-beanutils" % "1.8.3",
   "commons-io" % "commons-io" % "2.4",
+  "net.sourceforge.collections" % "collections-generic" % "4.01",
   "io.spray" %% "spray-json" % "1.2.6",
   "log4j" % "log4j" % "1.2.14",
   "com.novocode" % "junit-interface" % "0.8" % "test"

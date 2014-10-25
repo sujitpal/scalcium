@@ -8,7 +8,7 @@ class WordVectorGeneratorTest {
   @Test
   def testGenerateWordVectors(): Unit = {
     val infile = "src/main/resources/langmodel"
-    val outfile = "/tmp/weights.txt"
+    val outfile = "/tmp/word_vectors.txt"
     val gen = new WordVectorGenerator(new File(infile), new File(outfile))
   }
 }

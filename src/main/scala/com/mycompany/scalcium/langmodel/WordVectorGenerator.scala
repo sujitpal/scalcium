@@ -35,9 +35,17 @@ class WordVectorGenerator(infile: File, wtfile: File) {
   
   // do some tests on it
   val similarWordsToDay = word2vec.wordsNearest("day", 10)
+    .map(simword => (simword, word2vec.similarity("day", simword)))
   Console.println("Ten most similar words to 'day': " + similarWordsToDay)
+//  val similarWordsToDay2 = word2vec.similarWordsInVocabTo("day", 0.9)
+//  Console.println("Words most similar to 'day': " + similarWordsToDay2)
+  
   val similarWordsToShe = word2vec.wordsNearest("she", 1)
+    .map(simword => (simword, word2vec.similarity("she", simword)))
   Console.println("Most similar word to 'she': " + similarWordsToShe)
+//  val similarWordsToShe2 = word2vec.similarWordsInVocabTo("she", 0.9)
+//  Console.println("Words most similar to 'she':" + similarWordsToShe2)
+  
   val similarityHeShe = word2vec.similarity("he", "she")
   Console.println("similarity(he, she)=" + similarityHeShe)
   
@@ -45,8 +53,8 @@ class WordVectorGenerator(infile: File, wtfile: File) {
   val weights = new PrintWriter(new FileWriter(wtfile), true)
   cache.vocabWords()
     .map(vocabWord => vocabWord.getWord())
-    .foreach(word => weights.println("%s|%s".format(
-      word, word2vec.getWordVector(word).map(_.toString).mkString(","))))
+    .foreach(word => weights.println("%s,%s".format(
+      word2vec.getWordVector(word).map(_.toString).mkString(","), word)))
   weights.flush()
   weights.close()
 }
