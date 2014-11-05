@@ -18,7 +18,7 @@ resolvers ++= Seq(
   "Bliki Repo" at "http://gwtwiki.googlecode.com/svn/maven-repository/",
   "Neo4j-Contrib" at "https://raw.github.com/neo4j-contrib/m2/master/releases",
   "Sonatype OSS Releases"  at "http://oss.sonatype.org/content/repositories/releases/",
-  "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
+  "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
   "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases"
 )
 
