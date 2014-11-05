@@ -18,7 +18,7 @@ resolvers ++= Seq(
   "Bliki Repo" at "http://gwtwiki.googlecode.com/svn/maven-repository/",
   "Neo4j-Contrib" at "https://raw.github.com/neo4j-contrib/m2/master/releases",
   "Sonatype OSS Releases"  at "http://oss.sonatype.org/content/repositories/releases/",
-  "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
+  "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
   "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases"
 )
 
@@ -35,9 +35,9 @@ libraryDependencies ++= Seq(
   "org.apache.solr" % "solr-solrj" % "4.6.0",
   "org.neo4j" % "neo4j" % "1.9.6",
   "org.neo4j" % "neo4j-rest-graphdb" % "1.9",
-  //"com.github.jenshaase.uimascala" %% "uimascala-core" % "0.5.0-SNAPSHOT",
-  //"org.apache.uima" % "uimafit-core" % "2.1.0",
-  //"org.apache.uima" % "uimaj-tools" % "2.6.0",
+  "com.github.jenshaase.uimascala" %% "uimascala-core" % "0.5.0-SNAPSHOT",
+  "org.apache.uima" % "uimafit-core" % "2.1.0",
+  "org.apache.uima" % "uimaj-tools" % "2.6.0",
   "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.10",
   "mx.bigdata.jcalais" % "j-calais" % "1.0",
   "com.likethecolor" % "alchemy" % "1.1.2",
