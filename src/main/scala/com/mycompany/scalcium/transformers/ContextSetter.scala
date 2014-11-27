@@ -20,4 +20,20 @@ object ContextSetter {
         "logger", "none")))
     )
   }
+  
+case class Doc (
+  contentType: String,
+  title: String, 
+  keywords: String, 
+  body: String,
+  // placeholder for pipeline to update
+  paragraphs: List[String],
+  sentences: List[String],
+  phrases: List[String],
+  words: List[String],
+  title_cp: String,
+  body_cp: String,
+  scores: Map[String,Float],
+  context: Map[String,Any]
+)
 }
