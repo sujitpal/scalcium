@@ -1,3 +1,4 @@
+/*
 package com.mycompany.scalcium.pipeline
 
 import com.github.jenshaase.uimascala.core.description._
@@ -11,3 +12,4 @@ object TypeSystem {
     val entityType = new Feature[String]()
   }
 }
+*/

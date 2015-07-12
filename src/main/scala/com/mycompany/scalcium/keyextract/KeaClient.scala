@@ -8,10 +8,10 @@ import kea.main.KEAKeyphraseExtractor
 
 object KeaClient extends App {
 
-  val trainDir = "/home/sujit/Projects/mlia-examples/data/mtcrawler/kea/train"
-  val testDir = "/home/sujit/Projects/mlia-examples/data/mtcrawler/kea/test"
+  val trainDir = "/Users/palsujit/Projects/med_data/mtcrawler/kea/train"
+  val testDir = "/Users/palsujit/Projects/med_data/mtcrawler/kea/test"
   val modelFile = "/tmp/model"
-  val valKeysDir = "/home/sujit/Projects/mlia-examples/data/mtcrawler/kea/test/keys"
+  val valKeysDir = "/Users/palsujit/Projects/med_data/mtcrawler/kea/test/keys"
   val kc = new KeaClient()
   kc.train(trainDir, modelFile)
   kc.test(modelFile, testDir)
@@ -43,7 +43,7 @@ class KeaClient {
     keyExtractor.setEncoding("UTF-8")
     keyExtractor.setDocumentLanguage("en")
     keyExtractor.setStemmer(new PorterStemmer())
-    keyExtractor.setNumPhrases(10)
+    keyExtractor.setNumPhrases(40)
     keyExtractor.setBuildGlobal(true)
     keyExtractor.loadModel()
     keyExtractor.extractKeyphrases(keyExtractor.collectStems())

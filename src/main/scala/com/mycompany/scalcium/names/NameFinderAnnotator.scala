@@ -1,3 +1,4 @@
+/*
 package com.mycompany.scalcium.pipeline
 
 import org.apache.uima.jcas.JCas
@@ -46,3 +47,4 @@ class NameFinderAnnotator extends SCasAnnotator_ImplBase {
     (cbegin, cend)
   }
 }
+*/
