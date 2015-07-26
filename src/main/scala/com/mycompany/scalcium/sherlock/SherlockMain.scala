@@ -3,10 +3,12 @@ package com.mycompany.scalcium.sherlock
 import java.io.File
 import java.io.FileWriter
 import java.io.PrintWriter
+
 import scala.Array.canBuildFrom
 import scala.collection.mutable.ArrayBuffer
-import org.apache.commons.io.FileUtils
 import scala.io.Source
+
+import org.apache.commons.io.FileUtils
 
 object SherlockMain extends App {
 
@@ -108,8 +110,8 @@ object SherlockMain extends App {
                 vert._1, vert._2)))
         vwriter.flush()
         vwriter.close()
-        // consider minFreq = 10, create exclude Set
-        val excludeVertices = vertices.filter(vert => vert._2 < 10)
+        // consider minFreq = 32 (top 20), create exclude Set
+        val excludeVertices = vertices.filter(vert => vert._2 < 32)
                                       .map(vert => vert._1)
                                       .toSet
         val ewriter = new PrintWriter(new FileWriter(efile), true)
