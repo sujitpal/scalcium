@@ -17,13 +17,17 @@ object SherlockMain extends App {
     val sentenceSplitter = new SentenceSplitter()
     val nerFinder = new NERFinder()
     val entityDisambiguator = new EntityDisambiguator()
+    val graphDataGenerator = new GraphDataGenerator()
     
     preprocess(new File(dataDir, "gutenberg"), 
         new File(dataDir, "output.tsv"))
     wordCounts(new File(dataDir, "gutenberg"))
     disambiguatePersons(new File(dataDir, "output.tsv"), 
         new File(dataDir, "output-PER-disambig.tsv"))
-    
+    generateGraphData(new File(dataDir, "output-PER-disambig.tsv"),
+        new File(dataDir, "PER-graph-verts.tsv"),
+        new File(dataDir, "PER-graph-edges.tsv"))
+        
     
     def preprocess(indir: File, outfile: File): Unit = {
         val writer = new PrintWriter(new FileWriter(outfile), true)
@@ -77,9 +81,11 @@ object SherlockMain extends App {
             new File(dataDir, "output.tsv"), "PERSON")
         val uniquePersonEntities = personEntities.distinct
         val personSims = entityDisambiguator.similarities(uniquePersonEntities)
-        val personSyns = entityDisambiguator.synonyms(personSims) ++
-            // add a few well-known ones manually
+        val personSyns = entityDisambiguator.synonyms(personSims, 0.6) ++
+            // add few well-known ones that escaped the 0.6 dragnet
             Map(("Holmes", "Sherlock Holmes"),
+                ("MR. HOLMES", "Sherlock Holmes"),
+                ("MR. SHERLOCK HOLMES", "Sherlock Holmes"),
                 ("Mycroft", "Mycroft Holmes"),
                 ("Brother Mycroft", "Mycroft Holmes"))
         val writer = new PrintWriter(new FileWriter(outfile), true)
@@ -92,5 +98,25 @@ object SherlockMain extends App {
                   cs._1.toInt, cs._2.toInt, cs._3.toInt, cs._4)))
         writer.flush()
         writer.close()
+    }
+    
+    def generateGraphData(infile: File, vfile: File, efile: File): Unit = {
+        val vwriter = new PrintWriter(new FileWriter(vfile), true)
+        val vertices = graphDataGenerator.vertices(infile, 0)
+        vertices.toList.sortWith((a, b) => a._2 > b._2)
+            .foreach(vert => vwriter.println("%s\t%d".format(
+                vert._1, vert._2)))
+        vwriter.flush()
+        vwriter.close()
+        // consider minFreq = 10, create exclude Set
+        val excludeVertices = vertices.filter(vert => vert._2 < 10)
+                                      .map(vert => vert._1)
+                                      .toSet
+        val ewriter = new PrintWriter(new FileWriter(efile), true)
+        val edges = graphDataGenerator.edges(infile, 0.1D, excludeVertices)
+        edges.foreach(edge => ewriter.println("%s\t%s\t%.3f".format(
+            edge._1, edge._2, edge._3)))
+        ewriter.flush()
+        ewriter.close()
     }
 }

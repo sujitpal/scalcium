@@ -37,8 +37,9 @@ class EntityDisambiguator {
         }
     }
     
-    def synonyms(sims: List[(String,String,Double)]): Map[String,String] = {
-        sims.filter(ees => (!ees._1.equals(ees._2) && ees._3 > 0.6D))
+    def synonyms(sims: List[(String, String, Double)], 
+            minSim: Double): Map[String, String] = {
+        sims.filter(ees => (!ees._1.equals(ees._2) && ees._3 > minSim))
             // remove duplicate mappings, eg Peter => Peter Carey and
             // Peter => Peter Jones. Like the unique cases which have 
             // no suspected candidates, these will resolve to themselves
