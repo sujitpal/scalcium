@@ -41,9 +41,11 @@ class GraphDataGenerator {
     def edgeWeight(p1: Array[_], p2: Array[_]): Double = {
         val p1Locs = p1.slice(0, 3).map(_.asInstanceOf[String].toInt)
         val p2Locs = p2.slice(0, 3).map(_.asInstanceOf[String].toInt)
-        if (p1Locs(2) == p2Locs(2)) pSent
-        else if (p1Locs(1) == p2Locs(1)) pPara
-        else if (p1Locs(0) == p2Locs(0)) pFile
-        else 0.0D
+        if (p1Locs(0) == p2Locs(0)) { // same file
+            if (p1Locs(1) == p2Locs(1)) { // same para
+                if (p1Locs(2) == p2Locs(2)) pSent // same sentence
+                else pPara // same para but not same sentence 
+            } else pFile // same file but not same para
+        } else 0.0D // not same file
     }
 }
