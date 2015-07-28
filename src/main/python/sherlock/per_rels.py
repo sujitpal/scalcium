@@ -8,7 +8,7 @@ G = nx.Graph()
 fin = open("../../../../data/sherlock/PER-graph-edges.tsv", 'rb')
 for line in fin:
     cols = line.strip().split("\t")
-    G.add_edge(cols[0], cols[1], weight=int(math.log(10.0*float(cols[2]))))
+    G.add_edge(cols[0], cols[1], weight=1+int(math.log(10.0*float(cols[2]))))
 
 graph_pos = nx.shell_layout(G)
 
